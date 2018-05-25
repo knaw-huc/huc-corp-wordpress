@@ -36,7 +36,7 @@ var dom = require("gulp-jsdom");
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: '_dist'
+      baseDir: dst
     },
     browser: ["google chrome"], //, "firefox"
   })
