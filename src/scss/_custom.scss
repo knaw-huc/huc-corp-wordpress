@@ -1,0 +1,48 @@
+.siteWrap {
+  //background-color: #d0d7f9;
+}
+
+.textWrap {
+  //background-color:#fac9e7;
+}
+
+img[src*='#center'] {
+    //display: block;
+    margin: 0 .5em .5em 0;
+    width: 15em;
+    height: auto;
+    float: left;
+
+}
+
+img[src*='#wide'] {
+    display: block;
+    margin: 1em -1.5em 1em -1.5em;
+    width: calc(100% + 3em);
+    height: auto;
+    float: left;
+
+}
+
+body {
+  display: flex;
+}
+
+.nav {
+  width: 25%;
+  background-color: #e8e8e8;
+  min-height: 100vh;
+  padding: 1.5em;
+  font-size: .85em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+}
+
+.content > * {
+  max-width: 600px;
+
+}

@@ -1,0 +1,9 @@
+[
+  { "linkName": "Home", "href": "home.html", "class": "l1" },
+  { "linkName": "Blog", "href": "blog.html", "class": "l1" },
+  { "linkName": "Product", "href": "product.html", "class": "l1" },
+  { "linkName": "Product list", "href": "product-list.html", "class": "l1" },
+  { "linkName": "Page", "href": "page.html", "class": "l1" },
+  { "linkName": "Single", "href": "single.html", "class": "l1" },
+  { "linkName": "Update", "href": "updates.html", "class": "l1" }
+]

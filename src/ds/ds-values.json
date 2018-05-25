@@ -1,0 +1,6 @@
+{
+    "colors": {
+&&loop("src/ds/pre-color.json", "ds-color.json")
+        "black": "#000"
+    }
+}
