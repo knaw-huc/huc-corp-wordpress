@@ -169,13 +169,18 @@ if (!wp) {
 } else {
   gulp.task('wp-template-files', ['sass'], function () {
     return gulp.src("src/templates/**/*")
-      .pipe(replace('{{#each content}} {{> blog-item}} {{/each}}', '{{page-items}}'))
+      .pipe(plumber())
+
+      .pipe(replace('{{#each content}} {{> blog-item}} {{/each}}', '{{-page-items-}}'))
+      .pipe(replace('{{-', '$<$'))
+      .pipe(replace('-}}', '$>$'))
+      .pipe(handlebars(siteJson, options))
+      .pipe(replace('$<$', '{{'))
+      .pipe(replace('$>$', '}}'))
       .pipe(gulp.dest(dst));
 
   });
 }
-
-
 
 
 
