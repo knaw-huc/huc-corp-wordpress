@@ -1,0 +1,22 @@
+{
+  "siteName": "Site",
+  "logo": "test.png",
+  "url": "test.png",
+  "pages": [
+    {
+      "name": "page",
+      "keywords": "...",
+      "description": "...",
+      "template": "basic",
+      "title": "A page",
+      "image": "images/...png",
+      "content":
+      [
+        {
+          "file": "page"
+        }
+      ],
+      "pub-date": "10-06-2018"
+    }
+  ]
+  }

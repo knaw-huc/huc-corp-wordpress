@@ -12,22 +12,16 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
-    "gulp-deploy-ftp": "^1.0.1",
-    "gulp-html2jsx": "^1.0.3",
+    "gulp-compile-handlebars": "^0.6.1",
     "gulp-image-resize": "^0.13.0",
-    "gulp-markdown": "^2.0.1",
     "gulp-plumber": "^1.1.0",
-    "gulp-replace": "^0.6.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-to-ico": "^1.0.0"
+    "gulp-using": "^0.1.1"
   },
   "dependencies": {
-    "gulp-file-include": "^1.2.0",
-    "gulp-if": "^2.0.2",
-    "gulp-jsdom": "^1.0.0",
-    "gulp-remarkable": "^2.0.1",
-    "gulp-sass-import-json": "^1.0.0",
-    "gulp-util": "^3.0.8",
-    "markdown": "^0.5.0"
+    "gulp-remarkable": "^2.1.0",
+    "gulp-wait": "0.0.2"
   }
 }

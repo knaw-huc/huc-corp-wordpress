@@ -1,11 +1,9 @@
-@import 'ds-values.json';
-
-$colorPrimairy: map-get($colors, primary);
-$colorSecundairy: map-get($colors, secundary);
-$colorLink: map-get($colors, linkBlue);
-$colorGreyLight: map-get($colors, greyLight);
-$colorGreyMid: map-get($colors, greyMid);
-$colorGreyDark: map-get($colors, greyDark);
+$colorPrimairy: '#269075';
+$colorSecundairy: '#0087d4';
+$colorLink: '#0087d4';
+$colorGreyLight: #eeeeee;
+$colorGreyMid: '#999999';
+$colorGreyDark: '#3e3e3e';
 
 //@import 'colors';
 @import 'normalise';
@@ -15,4 +13,6 @@ $colorGreyDark: map-get($colors, greyDark);
 @import 'layout';
 @import 'grid';
 @import 'wp';
+@import 'illustrations';
 @import 'custom';
+@import 'rswk-hero' //RSWK

@@ -1,0 +1,74 @@
+// hero
+.site-hero{
+  width: 100vw;
+  height: 180vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.site-hero > *{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .site-hero{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-hero > *{
+    width: 50%;
+  }
+}
+
+
+.site-hero-logo{
+    background-image:url(../images/rooswijk-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+
+}
+
+
+
+
+.site-hero-intro {
+  background-image:url(../images/map-goodwin-sands.jpg);
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.site-hero-intro > *{
+  width: 400px;
+}
+
+
+.site-hero-intro-partners img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+.logo-huygensIng {
+  height: 45px !important;
+  width: auto;
+  margin-left: -8px;
+  margin-top: .5em;
+}
+
+.hero-bottom{
+  height: 123px;
+} 
