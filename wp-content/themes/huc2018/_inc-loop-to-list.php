@@ -24,8 +24,8 @@ $total_results = $query->found_posts;
 //the loop
 if ( have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
-    $templatePostsBuild = str_replace("@@postTitle",get_the_title(), $templatePosts);
-    $templatePostsBuild = str_replace("@@postContent",apply_filters( 'the_content', get_the_content('') ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-title}}",get_the_title(), $templatePosts);
+    $templatePostsBuild = str_replace("{{item-content}}",apply_filters( 'the_content', get_the_content('') ), $templatePostsBuild);
     $templatePostsBuild = str_replace("@@postDate", get_the_date(), $templatePostsBuild);
     $templatePostsBuild = str_replace("@@postLink", get_permalink( $post->ID ), $templatePostsBuild);
     $templatePostsBuild = str_replace("@@postId",get_the_ID(), $templatePostsBuild);

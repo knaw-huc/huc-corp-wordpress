@@ -20,6 +20,7 @@ const using = require('gulp-using');
 
 // HANDLEBARS
 var options = {
+    ignorePartials: true,
     batch : ['./src/components', './prebuild']
     }
 
@@ -31,6 +32,7 @@ var fHtml= 'src/**/*.html';
 var fImages= 'src/images/**/*';
 var fJs= 'src/js/**/*';
 var fJson= 'src/**/*.json';
+var fPhp= 'src/**/*.php';
 var fMd= 'content/**/*.md';
 
 
@@ -39,7 +41,7 @@ var fMd= 'content/**/*.md';
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: '_dist'
+      baseDir: dst
     },
     browser: ["google chrome"], //, "firefox"
   })
@@ -107,7 +109,6 @@ gulp.task('nav', ['preClean'], function() {
 
 gulp.task('convertMD', ['nav'], function () {
   return gulp.src("./content/**/*.md")
-
     .pipe(md())
     .pipe(replace('&lt;', '<'))
     .pipe(replace('&gt;', '>'))
@@ -150,23 +151,37 @@ gulp.task('sass', ['clean'], function() {
 
 });
 
-gulp.task('buildFromTemplates', ['sass'], function() {
+if (!wp) {
+  gulp.task('buildFromTemplates', ['sass'], function() {
 
-        for(var i=0; i<siteJson.pages.length; i++) {
-            var page = siteJson.pages[i],
-                fileName = page.name.replace(/ +/g, '-').toLowerCase();
-                template = page.template;
+          for(var i=0; i<siteJson.pages.length; i++) {
+              var page = siteJson.pages[i],
+                  fileName = page.name.replace(/ +/g, '-').toLowerCase();
+                  template = page.template;
 
-            gulp.src('./src/templates/'+template+'.html')
-                .pipe(plumber())
-                .pipe(handlebars(page, options))
-                .pipe(rename(fileName + ".html"))
-                .pipe(gulp.dest(dst));
-        }
-});
+              gulp.src('./src/templates/'+template+'.html')
+                  .pipe(plumber())
+                  .pipe(handlebars(page, options))
+                  .pipe(rename(fileName + ".html"))
+                  .pipe(gulp.dest(dst));
+          }
+  });
+} else {
+  gulp.task('wp-template-files', ['sass'], function () {
+    return gulp.src("src/templates/**/*")
+      .pipe(replace('{{#each content}} {{> blog-item}} {{/each}}', '{{page-items}}'))
+      .pipe(gulp.dest(dst));
+
+  });
+}
 
 
-gulp.task('distAssets',['buildFromTemplates'], function() {
+
+
+
+
+
+gulp.task('distAssets',['wp-template-files'], function() {
   gulp.src([fJs])
   .pipe(gulp.dest(dst+'/js'))
 
@@ -178,14 +193,17 @@ gulp.task('distAssets',['buildFromTemplates'], function() {
 
   gulp.src(['src/wp/**/*'])
   .pipe(gulp.dest(dst))
+
+  gulp.src(['src/components/**/*'])
+  .pipe(gulp.dest(dst))
 })
 
 
 
 // watch
-gulp.task('watch', ['distAssets', 'browserSync'], function (){
-  gulp.watch([fHtml, fScss, fJs, fJson, fMd], ['distAssets']);
-  gulp.watch([fHtml, fScss, fJs, fJson, fMd], browserSync.reload);
+gulp.task('watch', ['wp', 'browserSync'], function (){
+  gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], ['wp']);
+  gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
@@ -196,8 +214,9 @@ gulp.task('build', ['distAssets']);
 
 gulp.task('wp', ['distAssets'], function() {
   setTimeout(function(){
-    return gulp.src([dst+'/**/*', 'src/wp/**/*'])
+    return gulp.src([dst+'/**/*'])
     .pipe(gulp.dest('/Users/basdoppen/Webserver/wp-huc/wp-content/themes/'+themeName))
+
   }, 4000);
 
 })

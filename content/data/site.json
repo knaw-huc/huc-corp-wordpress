@@ -17,6 +17,38 @@
         }
       ],
       "pub-date": "10-06-2018"
+    },
+      {
+        "name": "index",
+        "keywords": "...",
+        "description": "...",
+        "template": "basic",
+        "title": "home",
+        "image": "images/...png",
+        "content":
+        [
+          {
+            "file": "page"
+          }
+        ],
+        "pub-date": "10-06-2018"
+      }
+  ],
+  "posts": [
+    {
+      "name": "post1",
+      "keywords": "...",
+      "description": "...",
+      "template": "blog",
+      "title": "A blog",
+      "image": "images/...png",
+      "content":
+      [
+        {
+          "file": "page"
+        }
+      ],
+      "pub-date": "10-06-2018"
     }
   ]
   }
