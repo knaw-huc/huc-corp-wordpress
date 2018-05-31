@@ -133,17 +133,33 @@ gulp.task('pre', ['convertMD'], function() {
 //////////////////   SITE BUILD
 
   // clean all previous output
-gulp.task('clean', ['pre'], function () {
+gulp.task('clean', function () {
     return gulp.src([dst], {read: false})
         .pipe(plumber())
         .pipe(clean({force: true}))
 });
 
 
+gulp.task('comps', ['clean'], function () {
+  return gulp.src("src/components/**/*")
+    .pipe(plumber())
+
+    .pipe(replace('{{-', '$<$'))
+    .pipe(replace('-}}', '$>$'))
+    .pipe(handlebars(siteJson, options))
+
+    .pipe(gulp.dest(prebuild));
+
+});
+
+
+
+
+
 
 
 //create css from sass
-gulp.task('sass', ['clean'], function() {
+gulp.task('sass', ['comps'], function() {
   return gulp.src(fScss)
     .pipe(plumber())
     .pipe(sass())
