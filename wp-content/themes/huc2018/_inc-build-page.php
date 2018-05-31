@@ -10,6 +10,10 @@ $relPath = str_replace('http://','//', $relPath);
 //Build page
 $template =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePage);
 
+//general
+$template = str_replace('{{nav}}',$headerMenu, $template);
+$template = str_replace("{{site-name}}",get_bloginfo('name'), $template);
+
 //single
 $template = str_replace("{{page-title}}",$postTitle, $template);
 $template = str_replace("{{page-content}}",$postContent, $template);
@@ -27,9 +31,7 @@ $template = str_replace('{{items-products-results}}', $allProductItemsTotal_resu
 
 $template = str_replace('@@wpPaging',$paging, $template);
 
-//general
-$template = str_replace('{{nav}}',$headerMenu, $template);
-$template = str_replace("{{site-name}}",get_bloginfo('name'), $template);
+
 //include('_inc-build-page-custom.php');
 
 $template = str_replace('href="css/','href="'.$relPath.'/css/', $template);
