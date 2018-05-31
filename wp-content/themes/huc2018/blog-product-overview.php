@@ -6,11 +6,14 @@ $templatePage = 'blog-product-overview.html';
 $lists = array
   (
   array('blog-item.html','post','10','DESC','allPostItems'),
-  array('product-item.html','test-product','10','DESC', 'allProductItems')
+  array('product-item.html','test-products','10','DESC', 'allProductItems')
   );
 
 include('_inc-loop-one-page-single.php');
-for ($row = 0; $row < 1; $row++) {
+
+
+
+for ($row = 0; $row < 2; $row++) {
     $templatePostSnip = $lists[$row][0];
     $postType = $lists[$row][1];
     $postAmount = $lists[$row][2];

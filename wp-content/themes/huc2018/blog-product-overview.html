@@ -21,18 +21,27 @@
 Huc
 </div>
 
-<div class="textWrap">
-  <h1>{{page-title}}</h1>
-  {{page-content}}
 
-  <h2>Blogs ({{page-results}})</h2>
-  {{page-items}}
+<div class="itemSpread">
 
-  <h2>Products ({{page-results}})</h2>
-  {{page-product-items}}  
+  <div style="padding: 1em; width:30%; background-color:#f0f0f0">
+    {{nav}}
+  </div>
+
+  <div style="padding: 1em; width:66%;">
+    <h1>{{page-title}}</h1>
+    {{page-content}}
+
+    <h2>blogs ({{page-results}})</h2>
+    {{page-items}}
+    <br><br>
+    <h2>Products ({{page-results}})</h2>
+    {{page-product-items}}
+  </div>
 
 </div>
-{{nav}}
+
+
   <script src="js/caption.js"></script>
   <script src="js/gallery.js"></script>
   </body>
