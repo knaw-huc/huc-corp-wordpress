@@ -19,10 +19,12 @@ $template = str_replace("{{page-link}}",$postLink, $template);
 $template = str_replace("{{page-hero-content}}",$postHero, $template);
 
 
-// list
-$template = str_replace('{{page-items}}', $allPostItems, $template);
-$template = str_replace('{{page-product-items}}', $allProductItems, $template);
-$template = str_replace('{{page-results}}', $total_results.' results', $template);
+// lists
+$template = str_replace('{{items-posts}}', $allPostItems, $template);
+$template = str_replace('{{items-posts-results}}', $allPostItemsTotal_results.' results', $template);
+$template = str_replace('{{items-products}}', $allProductItems, $template);
+$template = str_replace('{{items-products-results}}', $allProductItemsTotal_results.' results', $template);
+
 $template = str_replace('@@wpPaging',$paging, $template);
 
 //general

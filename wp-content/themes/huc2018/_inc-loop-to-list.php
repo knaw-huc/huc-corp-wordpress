@@ -21,11 +21,10 @@ $args = array(
 wp_reset_query();
 $query = new WP_Query( $args );
 global $query;
-$total_results = $query->found_posts;
+${$varName.'Total_results'} = $query->found_posts;
 
 
 //the loop
-
 if ( have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
     $templatePostsBuild = '';

@@ -6,8 +6,7 @@ $templatePage = 'blog-overview.html';
 // lists for items
 $lists = array
   (
-  array('blog-item.html','post','10','DESC','allPostItems'),
-  array('product-item.html','test-products','10','DESC', 'allProductItems')
+  array('blog-item.html','post','10','DESC','allPostItems')
   );
 
 include('_inc-loop-one-page-single.php');
