@@ -18,22 +18,22 @@ $args = array(
 
 //paging init
 $query = new WP_Query( $args );
-global $query;
-$total_results = $query->found_posts;
+//global $query;
+//$total_results = $query->found_posts;
 
 //the loop
 if ( have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
     $templatePostsBuild = str_replace("{{item-title}}",get_the_title(), $templatePosts);
     $templatePostsBuild = str_replace("{{item-content}}",apply_filters( 'the_content', get_the_content('') ), $templatePostsBuild);
-    $templatePostsBuild = str_replace("@@postDate", get_the_date(), $templatePostsBuild);
-    $templatePostsBuild = str_replace("@@postLink", get_permalink( $post->ID ), $templatePostsBuild);
-    $templatePostsBuild = str_replace("@@postId",get_the_ID(), $templatePostsBuild);
-    $templatePostsBuild = str_replace("@@postThumb",get_the_post_thumbnail($page->ID, 'medium'), $templatePostsBuild);
-    $allPostItems = $allPostItems.$templatePostsBuild;
+    $templatePostsBuild = str_replace("{{item-date}}", get_the_date(), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-id}}",get_the_ID(), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'medium'), $templatePostsBuild);
+    $$varName = $allPostItems.$templatePostsBuild;
   endwhile;
 
-$paging = pagination($query->max_num_pages);
+//$paging = pagination($query->max_num_pages);
 endif;
 
 

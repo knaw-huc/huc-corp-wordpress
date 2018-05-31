@@ -21,6 +21,7 @@ $template = str_replace("{{page-hero-content}}",$postHero, $template);
 
 // list
 $template = str_replace('{{page-items}}', $allPostItems, $template);
+$template = str_replace('{{page-product-items}}', $allProductItems, $template);
 $template = str_replace('{{page-results}}', $total_results.' results', $template);
 $template = str_replace('@@wpPaging',$paging, $template);
 

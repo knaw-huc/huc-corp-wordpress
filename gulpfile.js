@@ -172,6 +172,7 @@ if (!wp) {
       .pipe(plumber())
 
       .pipe(replace('{{#each content}} {{> blog-item}} {{/each}}', '{{-page-items-}}'))
+      .pipe(replace('{{#each content}} {{> product-item}} {{/each}}', '{{-page-product-items-}}'))
       .pipe(replace('{{-', '$<$'))
       .pipe(replace('-}}', '$>$'))
       .pipe(handlebars(siteJson, options))
@@ -206,9 +207,9 @@ gulp.task('distAssets',['wp-template-files'], function() {
 
 
 // watch
-gulp.task('watch', ['wp', 'browserSync'], function (){
+gulp.task('watch', ['wp', ], function (){ //'browserSync'
   gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], ['wp']);
-  gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], browserSync.reload);
+  //gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
@@ -221,7 +222,6 @@ gulp.task('wp', ['distAssets'], function() {
   setTimeout(function(){
     return gulp.src([dst+'/**/*'])
     .pipe(gulp.dest('/Users/basdoppen/Webserver/wp-huc/wp-content/themes/'+themeName))
-
   }, 4000);
 
 })
