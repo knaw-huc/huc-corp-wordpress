@@ -171,8 +171,8 @@ if (!wp) {
     return gulp.src("src/templates/**/*")
       .pipe(plumber())
 
-      .pipe(replace('{{#each content}} {{> blog-item}} {{/each}}', '{{-items-posts-}}'))
-      .pipe(replace('{{#each content}} {{> product-item}} {{/each}}', '{{-items-products-}}'))
+      .pipe(replace('{{#each content}} {{> items-blog}} {{/each}}', '{{-items-posts-}}'))
+      .pipe(replace('{{#each content}} {{> items-product}} {{/each}}', '{{-items-products-}}'))
       .pipe(replace('{{-', '$<$'))
       .pipe(replace('-}}', '$>$'))
       .pipe(handlebars(siteJson, options))

@@ -10,8 +10,8 @@ include('_inc-loop-one-page-single.php');
 // Handle items
 $lists = array
   (
-  array('blog-item.html','post','10','DESC','allPostItems'),
-  array('product-item.html','test-products','10','DESC', 'allProductItems')
+  array('item-blog.html','post','10','DESC','allPostItems'),
+  array('item-product.html','test-products','10','DESC', 'allProductItems')
   );
 
 for ($row = 0; $row < count($lists); $row++) {
