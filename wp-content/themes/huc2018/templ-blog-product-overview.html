@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{site-name}}</title>
+    <title>{{page-title}} - {{site-name}}</title>
     <meta name="description" content="{{description}}">
     <meta name="keywords" content="{{keywords}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +17,12 @@
   </head>
   <body>
 
-<div class="head itemSpread textWrap">
-Huc
-</div>
-
-
 <div class="itemSpread">
 
   <div style="padding: 1em; width:30%; background-color:#f0f0f0">
+    <div class="head">
+    <strong>{{site-name}}</strong>
+    </div>
     {{nav}}
   </div>
 
@@ -32,9 +30,23 @@ Huc
     <h1>{{page-title}}</h1>
     {{page-content}}
 
-    <h2>blogs ({{page-results}})</h2>
-    
+    <div class="page-cats">
+      Page categories:<br>
+      {{page-categories}}
+    </div>
 
+    <div class="site-cats">
+      Site categories:<br>
+      {{site-categories}}
+    </div>
+    <br>
+
+
+    <h2>blogs ({{items-posts-results}})</h2>
+    {{items-posts}}
+    <br><br>
+    <h2>Products ({{items-products-results}})</h2>
+    {{items-products}}
   </div>
 
 </div>

@@ -1,16 +1,27 @@
 {{> html-head}}
 
-{{> page-head}}
-
 <div class="itemSpread">
 
   <div style="padding: 1em; width:30%; background-color:#f0f0f0">
+    {{> page-head}}
     {{-nav-}}
   </div>
 
   <div style="padding: 1em; width:66%;">
     <h1>{{-page-title-}}</h1>
     {{-page-content-}}
+
+    <div class="page-cats">
+      Page categories:<br>
+      {{-page-categories-}}
+    </div>
+
+    <div class="site-cats">
+      Site categories:<br>
+      {{-site-categories-}}
+    </div>
+    <br>
+
 
     <h2>blogs ({{-items-posts-results-}})</h2>
     {{#each content}} {{> items-blog}} {{/each}}

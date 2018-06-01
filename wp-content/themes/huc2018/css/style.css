@@ -287,8 +287,11 @@ nav ul ul {
 .gallery-items .illustration-caption {
   display: none; }
 
-.opvarenden dd {
-  display: none; }
+.page-cats {
+  background-color: #dedb3b; }
+
+.site-cats {
+  background-color: #ed80ba; }
 
 .site-hero {
   width: 100vw;

@@ -7,6 +7,7 @@ if (have_posts()) : while (have_posts()) : the_post();
   $postAuthor = get_the_author();
   $postLink = get_the_permalink();
   $postCustomVal01 = get_the_title();
+  include('_inc-page-categories.php');
 
 endwhile; else:
 endif;

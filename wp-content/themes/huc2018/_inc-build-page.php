@@ -1,6 +1,7 @@
 <?php
 
 include('_inc-navigation.php');
+include('_inc-site-categories.php');
 
 
 //relative path
@@ -22,6 +23,10 @@ $template = str_replace("{{page-author}}",$postAuthor, $template);
 $template = str_replace("{{page-link}}",$postLink, $template);
 $template = str_replace("{{page-hero-content}}",$postHero, $template);
 
+// categories
+$template = str_replace("{{page-categories}}",$postCats, $template);
+$template = str_replace("{{site-categories}}",$siteCats, $template);
+
 
 // lists
 $template = str_replace('{{items-posts}}', $allPostItems, $template);
@@ -32,11 +37,10 @@ $template = str_replace('{{items-products-results}}', $allProductItemsTotal_resu
 $template = str_replace('@@wpPaging',$paging, $template);
 
 
-//include('_inc-build-page-custom.php');
-
 $template = str_replace('href="css/','href="'.$relPath.'/css/', $template);
 $template = str_replace('src="js/','src="'.$relPath.'/js/', $template);
 $template = str_replace('src="images/','src="'.$relPath.'/images/', $template);
+$template = str_replace('href="images/','href="'.$relPath.'/images/', $template);
 
 echo $template;
 ?>

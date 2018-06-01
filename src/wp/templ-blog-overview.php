@@ -1,6 +1,6 @@
 <?php /* Template Name: blog overview page */ ?>
 <?php
-$templatePage = 'blog-overview.html';
+$templatePage = 'templ-blog-overview.html';
 
 
 // lists for items
