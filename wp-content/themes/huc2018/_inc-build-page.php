@@ -31,8 +31,7 @@ $template = str_replace("{{site-categories}}",$siteCats, $template);
 // lists
 $template = str_replace('{{items-posts}}', $allPostItems, $template);
 $template = str_replace('{{items-posts-results}}', $allPostItemsTotal_results.' results', $template);
-$template = str_replace('{{items-products}}', $allProductItems, $template);
-$template = str_replace('{{items-products-results}}', $allProductItemsTotal_results.' results', $template);
+include('_inc-z-custom-build-list.php');
 
 $template = str_replace('@@wpPaging',$paging, $template);
 

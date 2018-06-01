@@ -1,8 +1,6 @@
 <?php
 
 
-//include('_inc-pagination.php');
-
 // card snippit
 $templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePostSnip);
 
