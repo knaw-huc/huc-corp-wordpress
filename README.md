@@ -4,6 +4,8 @@ Generates a wordpress theme
 ## Setup
 To build site
 
-* `gulp` (builds the site)
+* `gulp` (build a Wordpress template)
 
-## Documentation
+## Connect page, posts and other custom types
+Setup a connection in `wp/functions-connections.php`.
+call it with `displayConnection("publications-staff")`

@@ -2,7 +2,7 @@
 
 include('_inc-navigation.php');
 include('_inc-site-categories.php');
-include('_inc-connections.php');
+
 
 
 //relative path
@@ -35,7 +35,7 @@ $template = str_replace('{{items-posts-results}}', $allPostItemsTotal_results.' 
 include('_inc-z-custom-build-list.php');
 
 // Connections
-$template = str_replace('{{connect-publications}}', displayConnection(), $template);
+$template = str_replace('{{connect-publications}}', displayConnection('publications-staff'), $template);
 
 $template = str_replace('@@wpPaging',$paging, $template);
 

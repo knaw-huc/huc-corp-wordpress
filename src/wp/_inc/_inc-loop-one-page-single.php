@@ -8,6 +8,7 @@ if (have_posts()) : while (have_posts()) : the_post();
   $postLink = get_the_permalink();
   $postCustomVal01 = get_the_title();
   include('_inc-page-categories.php');
+  include('_inc-connections.php');
 
 endwhile; else:
 endif;
