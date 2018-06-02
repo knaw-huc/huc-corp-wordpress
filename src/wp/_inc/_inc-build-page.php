@@ -34,8 +34,7 @@ $template = str_replace('{{items-posts}}', $allPostItems, $template);
 $template = str_replace('{{items-posts-results}}', $allPostItemsTotal_results.' results', $template);
 include('_inc-z-custom-build-list.php');
 
-// Connections
-$template = str_replace('{{connect-publications}}', displayConnection('publications-staff'), $template);
+
 
 $template = str_replace('@@wpPaging',$paging, $template);
 

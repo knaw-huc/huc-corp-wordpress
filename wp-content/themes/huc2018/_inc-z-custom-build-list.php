@@ -1,4 +1,5 @@
 <?php
+// lists
 $template = str_replace('{{items-products}}', $allProductItems, $template);
 $template = str_replace('{{items-products-results}}', $allProductItemsTotal_results.' results', $template);
 
@@ -13,4 +14,10 @@ $template = str_replace('{{items-publications-results}}', $allPublicationItemsTo
 
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);
+
+// Connections
+$template = str_replace('{{connect-publications-staff}}', displayConnection('publications-staff'), $template);
+$template = str_replace('{{connect-publications-project}}', displayConnection('publications-projects'), $template);
+$template = str_replace('{{connect-staff-projects}}', displayConnection('staff-projects'), $template);
+$template = str_replace('{{connect-staff-products}}', displayConnection('staff-products'), $template);
 ?>

@@ -10,7 +10,7 @@ include('_inc-loop-one-page-single.php');
 $lists = array
   (
   array('item-blog.html','post','10','DESC','allPostItems'),
-  array('item-product.html','test-products','10','DESC', 'allProductItems'),
+  array('item-product.html','products','10','DESC', 'allProductItems'),
   array('item-blog.html','vacatures','10','DESC', 'allVacatureItems'),
   array('item-blog.html','projects','10','DESC', 'allProjectItems'),
   array('item-blog.html','publications','10','DESC', 'allPublicationItems'),
