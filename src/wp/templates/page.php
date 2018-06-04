@@ -1,6 +1,6 @@
 <?php
 $templatePage = 'page.html';
 
-include('_inc-loop-one-page-single.php');
-include('_inc-build-page.php');
+include('_inc-build-1-single-page.php');
+include('_inc-build-4-total-page.php');
 ?>

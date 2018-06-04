@@ -5,6 +5,6 @@ for ($row = 0; $row < count($lists); $row++) {
     $postAmount = $lists[$row][2];
     $loopOrder = $lists[$row][3];
     $varName = $lists[$row][4];
-    include('_inc-loop-to-list.php');
+    include('_inc-build-2-items.php');
 }
 ?>

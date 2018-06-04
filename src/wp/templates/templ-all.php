@@ -1,9 +1,9 @@
-<?php /* Template Name: blog product overview page */ ?>
+<?php /* Template Name: test all */ ?>
 <?php
 
 // Handle basic page
-$templatePage = 'templ-blog-product-overview.html';
-include('_inc-loop-one-page-single.php');
+$templatePage = 'templ-all.html';
+include('_inc-build-1-single-page.php');
 
 
 // Handle items  item file | post type | number of items | variable name
@@ -17,10 +17,10 @@ $lists = array
   array('item-blog.html','staff','10','DESC', 'allStaffItems')
 
   );
-include('_inc-templ-array.php');
+include('_inc-build-3-template-array.php');
 
 
 // Build the page
-include('_inc-build-page.php');
+include('_inc-build-4-total-page');
 
 ?>
