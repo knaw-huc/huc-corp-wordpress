@@ -21,6 +21,6 @@ include('_inc-build-3-template-array.php');
 
 
 // Build the page
-include('_inc-build-4-total-page');
+include('_inc-build-4-total-page.php');
 
 ?>

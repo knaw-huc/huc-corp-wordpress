@@ -6,7 +6,14 @@ if (have_posts()) : while (have_posts()) : the_post();
   $postDate = get_the_date();
   $postAuthor = get_the_author();
   $postLink = get_the_permalink();
-  $postCustomVal01 = get_the_title();
+  $postExcerpt = get_the_excerpt();
+
+  include('_inc-z-custom-build-custom-fields.php');
+
+
+
+
+
   include('_inc-page-categories.php');
   include('_inc-connections.php');
 
