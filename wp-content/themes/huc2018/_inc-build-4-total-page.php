@@ -40,8 +40,6 @@ $template = str_replace('{{items-posts}}', $allPostItems, $template);
 $template = str_replace('{{items-posts-results}}', $allPostItemsTotal_results.' results', $template);
 include('_inc-z-custom-build-list.php');
 
-// external content
-$template = str_replace('{{-external-content-}}', $allPostItems, $template);
 
 $template = str_replace('@@wpPaging',$paging, $template);
 
