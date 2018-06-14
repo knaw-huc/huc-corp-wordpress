@@ -4,11 +4,16 @@ var genSvgStart = '<svg width="100%" height="100%">';
 var genSvgEnd = '</svg>';
 var genSvgbody = '';
 
+var figure01 = '..................................**.......****.....**##**...***##***.....**........**........**........**............................................';
+
+var figure02 = '..*...*.....*....*....*.....*...*......***#*#*****....*.........*.........*.....****#**#**...*...*......*..*.......*.*........**.........*.........*..';
+
+
 
 // Grid variables
 // create array with items positions
 // ROW  X
-var amountXitems = 9;
+var amountXitems = 10;
 var xPosItemArray = [];
 var divWidth = document.getElementById(divName).clientWidth;
 var divWidthMid = divWidth/2;
@@ -16,7 +21,7 @@ var xItemSpace = divWidth/(amountXitems+1);
 
 
 // COLS Y
-var amountYitems = 9;
+var amountYitems = 15;
 var yPosItemArray = [];
 var divHeight = document.getElementById(divName).clientHeight;
 var divHeightMid = divHeight/2;
@@ -48,36 +53,51 @@ document.getElementById(divName).innerHTML = genSvg;
 
 
 // put items on grid position
-function putAllItemsOnGridPosition() {
+function putAllItemsOnGridPosition(idName, scale) {
   gridItemAmount = 0;
   for (var k = 0; k < amountYitems; k++) {
     for (var l = 0; l < amountXitems; l++) {
       gridItemAmount++;
-      gridItemPos('gridDot'+gridItemAmount, xPosItemArray[l], yPosItemArray[k]);
+      gridItemPos(idName, gridItemAmount, xPosItemArray[l], yPosItemArray[k],scale);
     }
   }
 }
-putAllItemsOnGridPosition();
+putAllItemsOnGridPosition('gridDot', 'rand');
 
 
 
 
-
-
-
-
-
-//function to change the grid item size
-function gridItemSize(itemId) {
-  var scaleVal = 1;//randomInt(1,20)/10;
-  document.getElementById(itemId).style.transform = 'scale('+scaleVal+', '+scaleVal+')';
-}
 
 
 //function to change item position
-function gridItemPos(itemId, x, y) {
-  var scaleVal = randomInt(1,30)/10;
-  document.getElementById(itemId).style.transform = 'translate('+x+'px,'+y+'px) scale('+scaleVal+', '+scaleVal+')';
+function gridItemPos(idName, itemId, x, y, scale) {
+
+  var scaleVal =1;
+  if (scale =='rand'){
+    scaleVal = randomInt(1,30)/10;
+  }
+  if (scale =='f1'){
+
+    var figVal = figure01.slice((itemId-1),itemId);
+    if(figVal == '#') {
+      scaleVal = 5;
+    }
+    if(figVal == '*') {
+      scaleVal = 3;
+    }
+  }
+  if (scale =='f2'){
+
+    var figVal = figure02.slice((itemId-1),itemId);
+    if(figVal == '#') {
+      scaleVal = 5;
+    }
+    if(figVal == '*') {
+      scaleVal = 3;
+    }
+  }
+
+  document.getElementById(idName+itemId).style.transform = 'translate('+x+'px,'+y+'px) scale('+scaleVal+', '+scaleVal+')';
 }
 
 
@@ -91,6 +111,18 @@ function randomInt(min,max) {
 // timer
 var tid = setTimeout(changeTrigger, 2000);
 function changeTrigger() {
-	putAllItemsOnGridPosition();
-	tid = setTimeout(changeTrigger, 4000); // repeat itself
+	 // putAllItemsOnGridPosition('gridDot', 'f1');
+	 // tid = setTimeout(changeTrigger, 4000); // repeat itself
 }
+
+window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+    if ((scroll > divWidth) && (scroll < (2*divWidth))) {
+      putAllItemsOnGridPosition('gridDot', 'f1');
+    } else if ((scroll > (2*divWidth)) && (scroll < (3.5*divWidth))) {
+      putAllItemsOnGridPosition('gridDot', 'f2');
+    }else {
+        putAllItemsOnGridPosition('gridDot', 'rand');
+    }
+    console.log(scroll)
+});

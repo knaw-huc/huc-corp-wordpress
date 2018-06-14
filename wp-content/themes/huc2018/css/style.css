@@ -300,7 +300,16 @@ nav ul ul {
 
 .content-txt {
   max-width: 600px;
-  padding: 15em 3em 3em 3em; }
+  padding: 0em 3em 3em 3em; }
+
+.pageBlock {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.pageBlock p {
+  margin-bottom: 4em; }
 
 .colorbar {
   width: calc(50% - 4em);
@@ -323,5 +332,5 @@ nav ul ul {
 
 .gridDot {
   fill: #03dbe8;
-  transition: all 2s ease;
+  transition: all 1s ease;
   transform-origin: 50% 50%; }

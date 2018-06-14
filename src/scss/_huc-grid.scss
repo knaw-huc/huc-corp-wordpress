@@ -9,7 +9,18 @@ $margin-txt: 3em;
 
 .content-txt {
   max-width: 600px;
-  padding: 15em #{$margin-txt} 3em #{$margin-txt};
+  padding: 0em #{$margin-txt} 3em #{$margin-txt};
+}
+
+.pageBlock{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageBlock p{
+  margin-bottom: 4em;
 }
 
 .colorbar {
@@ -37,6 +48,6 @@ $margin-txt: 3em;
 
 .gridDot {
   fill: $colorPrimairy;
-  transition: all 2s ease;
+  transition: all 1s ease;
   transform-origin: 50% 50%;
 }
