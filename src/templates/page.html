@@ -1,19 +1,27 @@
 {{> html-head}}
 
-{{> page-head}}
 
-<div class="itemSpread">
 
-  <div style="padding: 1em; width:30%; background-color:#f0f0f0">
-    {{-nav-}}
-  </div>
 
-  <div style="padding: 1em; width:66%;">
-    <h1>{{-page-title-}}</h1>
-    {{-page-content-}}
+<div class="huc-page ">
+  <div class="siteWrap">
+    {{> page-head}}
+    <div class="huc-page-body">
+      <nav class="huc-subnav"><ul>{{-walker-}}</ul></nav>
+      <div class="huc-content">
+        <h1>{{-page-title-}}</h1>
+        {{-page-content-}}
+      </div>
+    </div>
   </div>
 
 
 </div>
+<div class="huc-bar-page">
+  <div class="huc-bar-gradient"></div>
+  <div class="huc-bar-brown"></div>
+</div>
+
+
 
 {{> html-footer}}

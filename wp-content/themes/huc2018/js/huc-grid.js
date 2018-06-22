@@ -8,7 +8,7 @@ var figure01 = '..................................**.......****.....**##**...***
 
 var figure02 = '..*...*.....*....*....*.....*...*......***#*#*****....*.........*.........*.....****#**#**...*...*......*..*.......*.*........**.........*.........*..';
 
-
+var figure03 = '#.....#....#...#......#.#........#.....#..#.#...#..#...#.#..#.....#........#.#......#...#....#.....#..#........#........#.............................';
 
 // Grid variables
 // create array with items positions
@@ -96,6 +96,16 @@ function gridItemPos(idName, itemId, x, y, scale) {
       scaleVal = 3;
     }
   }
+  if (scale =='f3'){
+
+    var figVal = figure03.slice((itemId-1),itemId);
+    if(figVal == '#') {
+      scaleVal = 5;
+    }
+    if(figVal == '*') {
+      scaleVal = 3;
+    }
+  }
 
   document.getElementById(idName+itemId).style.transform = 'translate('+x+'px,'+y+'px) scale('+scaleVal+', '+scaleVal+')';
 }
@@ -121,8 +131,11 @@ window.addEventListener("scroll", function (event) {
       putAllItemsOnGridPosition('gridDot', 'f1');
     } else if ((scroll > (2*divWidth)) && (scroll < (3.5*divWidth))) {
       putAllItemsOnGridPosition('gridDot', 'f2');
-    }else {
+    } else if ((scroll > (3.5*divWidth)) && (scroll < (5.5*divWidth))) {
+      putAllItemsOnGridPosition('gridDot', 'f3');
+    }
+    else {
         putAllItemsOnGridPosition('gridDot', 'rand');
     }
-    console.log(scroll)
+
 });
