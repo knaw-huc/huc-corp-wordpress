@@ -25,6 +25,7 @@ $subnavWidth: $wrapSite - $wrapText;
 .top-navigation li{
   display: inline-block;
   list-style: none;
+  margin: 0 0 0 0;
 }
 
 .top-navigation li:nth-child(-n+4) {

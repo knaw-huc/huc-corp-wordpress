@@ -252,7 +252,8 @@ nav ul ul {
 
 .top-navigation li {
   display: inline-block;
-  list-style: none; }
+  list-style: none;
+  margin: 0 0 0 0; }
 
 .top-navigation li:nth-child(-n+4) {
   font-weight: 700; }
@@ -285,9 +286,9 @@ nav a {
 
 .huc-bar-gradient {
   width: 50%;
-  background-image: -moz-linear-gradient(115deg, #03dbe8 11%, #fff568 100%);
-  background-image: -webkit-linear-gradient(115deg, #03dbe8 11%, #fff568 100%);
-  background-image: -ms-linear-gradient(115deg, #03dbe8 11%, #fff568 100%); }
+  background-image: -moz-linear-gradient(115deg, #03dbe8 11%, #ddf279 100%);
+  background-image: -webkit-linear-gradient(115deg, #03dbe8 11%, #ddf279 100%);
+  background-image: -ms-linear-gradient(115deg, #03dbe8 11%, #ddf279 100%); }
 
 .huc-bar-brown {
   width: 50%;
