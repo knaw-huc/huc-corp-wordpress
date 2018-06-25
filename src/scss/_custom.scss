@@ -1,25 +1,28 @@
 $hucBarWidth: 6em;
 $subnavWidth: $wrapSite - $wrapText;
 
+
+// layout
+
+
 .huc-page {
-  width: calc(100vw - #{$hucBarWidth}) ;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-
 }
 
 .huc-header{
-  height: 14em;
   margin-top: 2em;
+  flex-direction: column;
 }
 
 .huc-logo img{
-  width: 100px;
+  width: 50px;
   height: auto;
 }
 
 .top-navigation{
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .top-navigation li{
@@ -28,34 +31,130 @@ $subnavWidth: $wrapSite - $wrapText;
   margin: 0 0 0 0;
 }
 
-.top-navigation li:nth-child(-n+4) {
-  font-weight: 700;
+.top-navigation li a{
+  margin: 0 1em 0 0;
 }
 
-nav a {
-  color: $colorTxt;
-}
 
 .huc-page-body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
 }
 
 .huc-subnav {
-  width: $subnavWidth;
+  margin: 1em 0 3em 0;
 }
-
-.huc-subnav li {
-  list-style: none;
-  margin: 0 0 .5em 0;
-}
-
 
 
 .huc-content {
   max-width: $wrapText;
 }
+
+.huc-bar-page {
+  display: none;
+}
+
+.tags {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .huc-page {
+    display: flex;
+    width: calc(100vw - #{$hucBarWidth}) ;
+  }
+}
+
+.huc-subnav li {
+  list-style: none;
+  margin: 0 1em 0em 0;
+  display: inline-block;
+  font-size: .8em;
+  color: $colorGreyMid;
+}
+.huc-subnav a {
+  color: $colorGreyMid;
+}
+
+
+@media (min-width: 800px) {
+
+  .huc-header{
+    height: 14em;
+    margin-top: 2em;
+    flex-direction: row;
+  }
+
+  .huc-logo img{
+    width: 100px;
+    height: auto;
+  }
+
+  .top-navigation{
+    margin-top: 2em;
+  }
+
+  .top-navigation li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 0 0 0;
+  }
+  .top-navigation li a{
+    margin: 0 0 0 1em;
+  }
+
+
+  .huc-page-body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .huc-subnav {
+    width: $subnavWidth;
+    margin: 1em 0 2em 0;
+  }
+
+
+  .huc-subnav li {
+    display: block;
+    font-size: 1em;
+    color: $colorTxt;
+    margin: 0 1em .5em 0;
+  }
+
+  .huc-bar-page {
+    display: flex;
+  }
+
+  .tags {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+// markup
+.top-navigation li:nth-child(-n+4) {
+  font-weight: 700;
+}
+
+
+nav a {
+  color: $colorTxt;
+}
+
+
+
+.huc-subnav a {
+  margin: 0 0 0 0;
+}
+
+
+
 
 
 .huc-bar-page {
@@ -64,7 +163,6 @@ nav a {
   right: 0px;
   bottom: 0px;
   width: $hucBarWidth;
-  display: flex;
   flex-direction: row;
 }
 
@@ -83,5 +181,20 @@ nav a {
 
 
 .current-page-ancestor a, .current-menu-item a{
-  border-bottom: 2px solid #{$colorTxt};
+  border-bottom: 1px solid #{$colorGreyMid};
+}
+
+@media (min-width: 800px) {
+  .current-page-ancestor a, .current-menu-item a{
+    border-bottom: 2px solid #{$colorTxt};
+  }
+}
+
+
+.tag {
+  background-color: $colorSecundairy;
+  font-size: .75em;
+  padding: .1em .3em;
+  border-radius: 2px;
+
 }

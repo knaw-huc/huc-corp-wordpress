@@ -1,25 +1,30 @@
 // Site wrap
-.siteWrap {
-  max-width: $wrapSite;
-  padding: 0 $basicPadding;
-  margin-left: auto;
-  margin-right: auto;
 
-}
+  .siteWrap {
+    max-width: $wrapSite;
+    padding: 0 $basicPadding;
+    margin-left: auto;
+    margin-right: auto;
 
-.textWrap {
-  max-width: $wrapText;
-  padding: 0 $basicPadding;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing:content-box;
+  }
 
-}
-.siteWrap .textWrap {
-  max-width: $wrapText;
-  box-sizing: border-box;
-  padding: 0;
-}
+  .textWrap {
+    max-width: $wrapText;
+    padding: 0 $basicPadding;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing:content-box;
+
+  }
+  .siteWrap .textWrap {
+    max-width: $wrapText;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+
+
+
 
 // Items in layout
 .itemSpread {
