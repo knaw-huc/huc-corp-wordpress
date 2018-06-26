@@ -26,6 +26,18 @@ function my_connection_types() {
 			'to' => 'products'
 		) );
 
+		p2p_register_connection_type( array(
+			'name' => 'partner-products',
+			'from' => 'partners',
+			'to' => 'products'
+		) );
+
+		p2p_register_connection_type( array(
+			'name' => 'partner-projects',
+			'from' => 'partners',
+			'to' => 'projects'
+		) );
+
 
 }
 add_action( 'p2p_init', 'my_connection_types' );

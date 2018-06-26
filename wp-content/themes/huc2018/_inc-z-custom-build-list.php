@@ -20,6 +20,8 @@ $template = str_replace('{{connect-publications-staff}}', displayConnection('pub
 $template = str_replace('{{connect-publications-project}}', displayConnection('publications-projects'), $template);
 $template = str_replace('{{connect-staff-projects}}', displayConnection('staff-projects'), $template);
 $template = str_replace('{{connect-staff-products}}', displayConnection('staff-products'), $template);
+$template = str_replace('{{connect-partner-products}}', displayConnection('partner-products'), $template);
+$template = str_replace('{{connect-partner-projects}}', displayConnection('partner-projects'), $template);
 
 
 // external content from github

@@ -228,3 +228,8 @@ nav a {
 .card a {
   color: $colorTxt;
 }
+
+.connectedItems {
+  display: flex;
+  flex-direction: column;
+}
