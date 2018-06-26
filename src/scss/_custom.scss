@@ -39,7 +39,7 @@ $subnavWidth: $wrapSite - $wrapText;
 .huc-page-body {
   display: flex;
   flex-direction: column;
-
+  margin-bottom: 5em;
 }
 
 .huc-subnav {
@@ -197,4 +197,34 @@ nav a {
   padding: .1em .3em;
   border-radius: 2px;
 
+}
+
+
+// cards
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: $colorGreyLight;
+  padding: 1em;
+  width: 100%;
+  margin: 0 0 1em 0em;
+}
+@media (min-width: 800px) {
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    width: calc(33% - 1em);
+    margin: 0 1em 1em 0;
+  }
+}
+
+.card a {
+  color: $colorTxt;
 }

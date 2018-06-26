@@ -32,10 +32,10 @@ a {
   color: #999999; }
 
 .light-grey-bg {
-  background-color: #eeeeee; }
+  background-color: #fafafa; }
 
 pre {
-  background-color: #eeeeee;
+  background-color: #fafafa;
   font-size: 12px;
   padding: .5em;
   white-space: pre-wrap; }
@@ -260,7 +260,8 @@ nav ul ul {
 
 .huc-page-body {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 5em; }
 
 .huc-subnav {
   margin: 1em 0 3em 0; }
@@ -360,3 +361,24 @@ nav a {
   font-size: .75em;
   padding: .1em .3em;
   border-radius: 2px; }
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.card {
+  background-color: #fafafa;
+  padding: 1em;
+  width: 100%;
+  margin: 0 0 1em 0em; }
+
+@media (min-width: 800px) {
+  .cards {
+    flex-direction: row; }
+  .card {
+    width: calc(33% - 1em);
+    margin: 0 1em 1em 0; } }
+
+.card a {
+  color: #3e3e3e; }
