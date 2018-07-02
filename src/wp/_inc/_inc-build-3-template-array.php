@@ -5,6 +5,7 @@ for ($row = 0; $row < count($lists); $row++) {
     $postAmount = $lists[$row][2];
     $loopOrder = $lists[$row][3];
     $varName = $lists[$row][4];
+    $searchWord = $lists[$row][5];
     include('_inc-build-2-items.php');
 }
 ?>

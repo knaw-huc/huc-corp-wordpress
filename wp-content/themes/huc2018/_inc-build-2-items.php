@@ -12,6 +12,7 @@ $args = array(
   'orderby' => 'ID',
   'order' => $loopOrder,
   'category_name' => $loopTag,
+  's' => $searchWord, 
   );
 
 

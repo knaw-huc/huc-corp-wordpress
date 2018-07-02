@@ -233,3 +233,13 @@ nav a {
   display: flex;
   flex-direction: column;
 }
+
+.updateItems{
+  display: flex;
+  flex-direction: row;
+  color: $colorGreyMid;
+}
+.update-item {
+  width: calc(33% - 1em;);
+  margin-right: 1em;
+}

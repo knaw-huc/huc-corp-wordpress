@@ -386,3 +386,12 @@ nav a {
 .connectedItems {
   display: flex;
   flex-direction: column; }
+
+.updateItems {
+  display: flex;
+  flex-direction: row;
+  color: #999999; }
+
+.update-item {
+  width: calc(33% - 1em);
+  margin-right: 1em; }

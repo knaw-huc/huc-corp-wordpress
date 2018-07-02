@@ -1,9 +1,9 @@
 {{> page-template-header}}
 
         <h1>{{-page-title-}}</h1>
-        {{-page-content-}}
+        {{> page-product-github-content}}
 
-        <h2>Staff</h2>
+        <h2>Staff</h2>222
         <div class="connectedItems">
           {{-connect-staff-products-}}
         </div>
@@ -11,6 +11,11 @@
         <h2>Partners</h2>
         <div class="connectedItems">
           {{-connect-partner-products-}}
+        </div>
+
+        <h2>Product updates</h2>
+        <div class="updateItems">
+          {{-items-posts-}}
         </div>
 
         {{> page-social-media-bar}}
