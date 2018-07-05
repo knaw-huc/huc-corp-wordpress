@@ -339,6 +339,10 @@ nav a {
   width: 6em;
   flex-direction: row; }
 
+.footer {
+  background-color: #03dbe8;
+  padding: 2em; }
+
 .huc-bar-gradient {
   width: 50%;
   background-image: -moz-linear-gradient(115deg, #03dbe8 11%, #ddf279 100%);
