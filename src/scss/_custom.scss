@@ -167,7 +167,7 @@ nav a {
 }
 
 .footer {
-  background-color: $colorPrimairy;
+  background-color: $colorGreyLight;
   padding: 2em;
 
 }
@@ -248,4 +248,25 @@ nav a {
 .update-item {
   width: calc(33% - 1em;);
   margin-right: 1em;
+}
+
+.connectPartners {
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.connectPartners img {
+  width: 100px;
+  height: auto;
+  margin-right: 1em;
+}
+
+
+.huc-content h2 {
+  margin-top: 2em;
+}
+
+.MailChimp {
+  margin: 0 -.7em;
 }
