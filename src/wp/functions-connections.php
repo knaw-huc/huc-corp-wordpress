@@ -38,6 +38,24 @@ function my_connection_types() {
 			'to' => 'projects'
 		) );
 
+		p2p_register_connection_type( array(
+			'name' => 'page-projects',
+			'from' => 'page',
+			'to' => 'projects'
+		) );
+
+		p2p_register_connection_type( array(
+			'name' => 'staff-page',
+			'from' => 'staff',
+			'to' => 'page'
+		) );
+
+		p2p_register_connection_type( array(
+			'name' => 'publications-page',
+			'from' => 'publications',
+			'to' => 'page'
+		) );
+
 
 }
 add_action( 'p2p_init', 'my_connection_types' );

@@ -1,4 +1,3 @@
-
 <?php
 
 $walkerMenu = wp_nav_menu( array(

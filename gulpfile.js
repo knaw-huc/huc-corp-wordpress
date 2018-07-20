@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     imageResize = require('gulp-image-resize'),
     replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 const using = require('gulp-using');
 
 // HANDLEBARS
@@ -47,6 +48,11 @@ gulp.task('browserSync', function() {
   })
 })
 
+gulp.task('bsProx', function() {
+    browserSync.init({
+        proxy: "http://localhost:8888/wp-huc"
+    });
+});
 
 
 ////////////////    IMAGES
@@ -220,9 +226,9 @@ gulp.task('distAssets',['wp-template-files'], function() {
 
 
 // watch
-gulp.task('watch', ['wp', ], function (){ //'browserSync'
+gulp.task('watch', ['wp', 'bsProx'], function (){ //'browserSync'
   gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], ['wp']);
-  //gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], browserSync.reload);
+  gulp.watch([fHtml, fScss, fJs, fJson, fMd, fPhp], reload);
 });
 
 gulp.task('default', ['watch']);
@@ -235,6 +241,6 @@ gulp.task('wp', ['distAssets'], function() {
   setTimeout(function(){
     return gulp.src([dst+'/**/*'])
     .pipe(gulp.dest('/Users/basdoppen/Webserver/wp-huc/wp-content/themes/'+themeName))
-  }, 4000);
+  }, 1000);
 
 })

@@ -10,9 +10,10 @@ $args = array(
   'posts_per_page' => $postAmount,
   'paged' => $paged,
   'orderby' => 'ID',
+  'post_parent' => $postParent, //12404 //186
   'order' => $loopOrder,
   'category_name' => $loopTag,
-  's' => $searchWord, 
+  's' => $searchWord,
   );
 
 
@@ -21,11 +22,12 @@ wp_reset_query();
 $query = new WP_Query( $args );
 global $query;
 ${$varName.'Total_results'} = $query->found_posts;
-
+//print_r ($query);
 
 //the loop
 if ( have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
+    echo get_the_title();
     $templatePostsBuild = '';
     $templatePostsBuild = str_replace("{{item-title}}",get_the_title(), $templatePosts);
     $templatePostsBuild = str_replace("{{item-content}}",apply_filters( 'the_content', get_the_content('') ), $templatePostsBuild);

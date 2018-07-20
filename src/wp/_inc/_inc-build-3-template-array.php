@@ -6,6 +6,7 @@ for ($row = 0; $row < count($lists); $row++) {
     $loopOrder = $lists[$row][3];
     $varName = $lists[$row][4];
     $searchWord = $lists[$row][5];
+    $postParent = $lists[$row][6];
     include('_inc-build-2-items.php');
 }
 ?>

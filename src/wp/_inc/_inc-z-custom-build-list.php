@@ -12,6 +12,8 @@ $template = str_replace('{{items-projects-results}}', $allProjectItemsTotal_resu
 $template = str_replace('{{items-publications}}', $allPublicationItems, $template);
 $template = str_replace('{{items-publications-results}}', $allPublicationItemsTotal_results.' results', $template);
 
+$template = str_replace('{{items-research-pages}}', $allResearchPages, $template);
+
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);
 
@@ -22,6 +24,10 @@ $template = str_replace('{{connect-staff-projects}}', displayConnection('staff-p
 $template = str_replace('{{connect-staff-products}}', displayConnection('staff-products'), $template);
 $template = str_replace('{{connect-partner-products}}', displayConnection('partner-products'), $template);
 $template = str_replace('{{connect-partner-projects}}', displayConnection('partner-projects'), $template);
+
+$template = str_replace('{{connect-page-projects}}', displayConnection('page-projects'), $template);
+$template = str_replace('{{connect-staff-page}}', displayConnection('staff-page'), $template);
+$template = str_replace('{{connect-publications-page}}', displayConnection('publications-page'), $template);
 
 
 // external content from github
