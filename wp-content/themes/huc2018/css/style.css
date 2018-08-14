@@ -278,7 +278,7 @@ nav ul ul {
 @media (min-width: 500px) {
   .huc-page {
     display: flex;
-    width: calc(100vw - 6em); } }
+    width: calc(100vw - 8em); } }
 
 .huc-subnav li {
   list-style: none;
@@ -336,7 +336,7 @@ nav a {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 6em;
+  width: 8em;
   flex-direction: row; }
 
 .footer {
@@ -351,7 +351,28 @@ nav a {
 
 .huc-bar-brown {
   width: 50%;
-  background-color: #56504b; }
+  background-color: #56504b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff; }
+
+.huc-bar-language {
+  margin-top: 70px; }
+
+.huc-bar-language a {
+  color: #fff; }
+
+.huc-bar-partners {
+  flex-direction: column;
+  display: flex;
+  align-items: center; }
+
+.huc-bar-partners img {
+  width: 40px;
+  height: auto;
+  margin: 0em 0px 2em 0px; }
 
 .current-page-ancestor a, .current-menu-item a {
   border-bottom: 1px solid #999999; }

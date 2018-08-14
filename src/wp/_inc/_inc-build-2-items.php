@@ -30,6 +30,7 @@ if ( have_posts() ) :
     echo get_the_title();
     $templatePostsBuild = '';
     $templatePostsBuild = str_replace("{{item-title}}",get_the_title(), $templatePosts);
+    $templatePostsBuild = str_replace("{{item-extract}}",get_the_excerpt(), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-content}}",apply_filters( 'the_content', get_the_content('') ), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-date}}", get_the_date(), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templatePostsBuild);
