@@ -27,7 +27,7 @@ ${$varName.'Total_results'} = $query->found_posts;
 //the loop
 if ( have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
-    echo get_the_title();
+    //echo get_the_title();
     $templatePostsBuild = '';
     $templatePostsBuild = str_replace("{{item-title}}",get_the_title(), $templatePosts);
     $templatePostsBuild = str_replace("{{item-extract}}",get_the_excerpt(), $templatePostsBuild);
