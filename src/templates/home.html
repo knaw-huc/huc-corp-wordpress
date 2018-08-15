@@ -1,21 +1,25 @@
 {{> html-head}}
-
-{{> page-head}}
-
-<div class="itemSpread">
-
-  <div style="padding: 1em; width:30%; background-color:#f0f0f0">
-    {{-nav-}}
+<div class="huc-header">
+  <div class="huc-logo">
+    <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
   </div>
-
-  <div style="padding: 1em; width:66%;">
-    <h1>{{-page-title-}}</h1>
-    {{-page-content-}}
-
-
-  </div>
-
-
 </div>
 
+
+  <div class="huc-home-content">{{-page-content-}}</div>
+  <div class="huc-bar-page bar-home">
+    <div class="huc-bar-gradient">
+      <div>
+        {{> page-top-nav}}
+      </div>
+      <div class="huc-bar-gradient-grid" id="huc-grid">
+      </div>
+
+    </div>
+    {{> page-huc-bar-brown}}
+  </div>
+
+
+
+<script src="js/huc-grid.js" charset="utf-8"></script>
 {{> html-footer}}

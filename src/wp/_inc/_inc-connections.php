@@ -8,6 +8,13 @@ function displayConnection($type) {
     'nopaging' => true,
   ) );
 
+  if (strpos($type, 'staff') !== false) {
+    $templateConnection =  file_get_contents(get_bloginfo('template_directory').'/item-person.html');
+  }else {
+    $templateConnection =  file_get_contents(get_bloginfo('template_directory').'/item-card.html');
+  }
+
+
 
 
   // Display connected pages
@@ -16,11 +23,20 @@ function displayConnection($type) {
     while ( $connected->have_posts() ) : $connected->the_post();
 
 
-      if (strpos($type, 'partner') !== false) {
-        $output = $output.'<a href="'.get_post_meta( get_the_ID(), 'wpcf-url', true ).'"><img src="images/'.get_post_meta( get_the_ID(), 'wpcf-image-name', true ).'" /></a>';
-      }else {
-        $output = $output.'<a href="'.get_the_permalink().'">'.get_the_title().'</a>';
-      }
+      // if (strpos($type, 'partner') !== false) {
+      //   $output = $output.'<a href="'.get_post_meta( get_the_ID(), 'wpcf-url', true ).'"><img src="images/'.get_post_meta( get_the_ID(), 'wpcf-image-name', true ).'" /></a>';
+
+
+      $templateConnectionBuild = '';
+      $templateConnectionBuild = str_replace("{{item-title}}",get_the_title(), $templateConnection);
+      $templateConnectionBuild = str_replace("{{item-extract}}",get_the_excerpt(), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-content}}",apply_filters( 'the_content', get_the_content('') ), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-date}}", get_the_date(), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-id}}",get_the_ID(), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'medium'), $templateConnectionBuild);
+      $output = $output.$templateConnectionBuild;
+
 
     endwhile;
     wp_reset_postdata();

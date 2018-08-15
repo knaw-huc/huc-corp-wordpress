@@ -1,0 +1,37 @@
+
+.huc-bar-gradient {
+  width: 50%;
+  background-image: -moz-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+  background-image: -webkit-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+  background-image: -ms-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+}
+
+.huc-bar-brown{
+  width: 50%;
+  background-color: $colorTertiary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.huc-bar-language {
+  margin-top: 70px;
+}
+
+.huc-bar-language a{
+  color: #fff;
+}
+
+.huc-bar-partners {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.huc-bar-partners img{
+  width: 40px;
+  height: auto;
+  margin: 0em 0px 2em 0px;
+}
