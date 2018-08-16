@@ -13,6 +13,7 @@ $template = str_replace('{{items-publications}}', $allPublicationItems, $templat
 $template = str_replace('{{items-publications-results}}', $allPublicationItemsTotal_results.' results', $template);
 
 $template = str_replace('{{items-research-pages}}', $allResearchPages, $template);
+$template = str_replace('{{items-homepage}}', $allHomeItems, $template);
 
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);

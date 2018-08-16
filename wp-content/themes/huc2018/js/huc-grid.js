@@ -118,12 +118,12 @@ function randomInt(min,max) {
 }
 
 
-// timer
-var tid = setTimeout(changeTrigger, 2000);
-function changeTrigger() {
-	 // putAllItemsOnGridPosition('gridDot', 'f1');
-	 // tid = setTimeout(changeTrigger, 4000); // repeat itself
-}
+// // timer
+// var tid = setTimeout(changeTrigger, 2000);
+// function changeTrigger() {
+// 	 // putAllItemsOnGridPosition('gridDot', 'f1');
+// 	 // tid = setTimeout(changeTrigger, 4000); // repeat itself
+// }
 
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;

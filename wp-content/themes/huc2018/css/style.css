@@ -437,7 +437,7 @@ nav a {
   margin: 0 -.7em; }
 
 .bar-home {
-  width: 50%; }
+  width: 60%; }
 
 .bar-home .huc-bar-gradient {
   width: calc(100% - 4em); }
@@ -446,4 +446,9 @@ nav a {
   width: 4em; }
 
 .huc-bar-gradient-grid {
-  height: calc(100vh - 100px); }
+  height: calc(100vh - 150px); }
+
+.gridDot {
+  fill: #03dbe8;
+  transition: all 1s ease;
+  transform-origin: 50% 50%; }
