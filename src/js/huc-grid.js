@@ -54,6 +54,7 @@ document.getElementById(divName).innerHTML = genSvg;
 
 // put items on grid position
 function putAllItemsOnGridPosition(idName, scale) {
+
   gridItemAmount = 0;
   for (var k = 0; k < amountYitems; k++) {
     for (var l = 0; l < amountXitems; l++) {
@@ -72,42 +73,39 @@ putAllItemsOnGridPosition('gridDot', 'rand');
 //function to change item position
 function gridItemPos(idName, itemId, x, y, scale) {
 
+
   var scaleVal =1;
   if (scale =='rand'){
     scaleVal = randomInt(1,30)/10;
   }
-  if (scale =='f1'){
 
+  if (scale =='f1'){
     var figVal = figure01.slice((itemId-1),itemId);
-    if(figVal == '#') {
-      scaleVal = 5;
-    }
-    if(figVal == '*') {
-      scaleVal = 3;
-    }
   }
   if (scale =='f2'){
-
     var figVal = figure02.slice((itemId-1),itemId);
-    if(figVal == '#') {
-      scaleVal = 5;
-    }
-    if(figVal == '*') {
-      scaleVal = 3;
-    }
   }
   if (scale =='f3'){
-
     var figVal = figure03.slice((itemId-1),itemId);
-    if(figVal == '#') {
-      scaleVal = 5;
-    }
-    if(figVal == '*') {
-      scaleVal = 3;
-    }
   }
 
+
+  if(figVal == '#') {
+    scaleVal = 5;
+  }
+  if(figVal == '*') {
+    scaleVal = 3;
+  }
+
+
   document.getElementById(idName+itemId).style.transform = 'translate('+x+'px,'+y+'px) scale('+scaleVal+', '+scaleVal+')';
+
+  if ((/MSIE 10/i.test(navigator.userAgent)) || (/MSIE 9/i.test(navigator.userAgent)) || (/rv:11.0/i.test(navigator.userAgent)) || (/Edge\/\d./i.test(navigator.userAgent))) {
+     document.getElementById(idName+itemId).setAttribute("transform", 'translate('+x+' '+y+') scale('+scaleVal+', '+scaleVal+')');
+  }
+
+
+
 }
 
 
