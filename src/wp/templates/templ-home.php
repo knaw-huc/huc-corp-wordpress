@@ -10,7 +10,7 @@ include('_inc-build-1-single-page.php');
 $lists = array
   (
 
-    array('item-homepage.html','homepage-items','10','DESC', 'allHomeItems')
+    array('item-homepage.html','homepage-items','10','ASC', 'allHomeItems')
 
 
   );
