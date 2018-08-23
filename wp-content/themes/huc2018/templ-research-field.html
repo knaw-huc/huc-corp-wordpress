@@ -16,27 +16,26 @@
     <meta property="og:image"         content="{{image}}" />
   </head>
   <body>
-<div class="huc-page ">
-  <div class="siteWrap">
-    <div class="huc-header itemSpread"> 
-      <div class="huc-logo">
-        <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      </div>
+<div class="huc-basic-layout">
+  <div class="huc-basic-col1">
+    <div class="huc-logo huc-page-head">
+      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
+    </div>
+
+    <nav class="huc-subnav">
+      <ul>{{walker}}</ul>
+    </nav>
+  </div>
+
+  <div class="huc-basic-col2">
+    <div class="top-navigation huc-page-head">
       <nav class="top-navigation">
         {{nav}}
       </nav>
     </div>
-    <div class="huc-page-body">
-      <nav class="huc-subnav">
-        <ul>{{walker}}</ul>
-        <div class="tags">
-          {{page-categories}}
-        </div>
-      </nav>
-      <div class="huc-content">
+    <div class="huc-content">
 
         <h1>{{page-title}}</h1>
-        <em>page for one research field</em>
 
         {{page-content}}
 
@@ -62,25 +61,20 @@
 
 
 
-      </div>
+  {{page-categories}}
+
     </div>
   </div>
-  <footer class="footer">
-    <div class="siteWrap c3">
-      <div>&nbsp;</div>
-      <div>KNAW<br><strong>Humanities Cluster</strong><br>Amsterdam</div>
-      <div><a href="https://twitter.com/knawhuc">Follow us on Twitter</a></div>
-    </div>
-  </footer>
+  
 </div>
 <div class="huc-bar-page">
   <div class="huc-bar-gradient"></div>
   <div class="huc-bar-brown">
     <div class="huc-bar-language"><a href="">nl</a> <a href="">eng</a></div>
     <div class="huc-bar-partners">
-      <a href=""><img src="images/logo-partner-IISG.png" alt="Partner IISG"></a>
-      <a href=""><img src="images/logo-partner-meertens.png" alt="Partner Meertens Instituut"></a>
-      <a href=""><img src="images/logo-partner-huygens.png" alt="Partner Huygens ING"></a>
+      <a href="https://socialhistory.org"><img src="images/logo-partner-IISG.png" alt="Partner IISG"></a>
+      <a href="http://www.meertens.knaw.nl"><img src="images/logo-partner-meertens.png" alt="Partner Meertens Instituut"></a>
+      <a href="https://www.huygens.knaw.nl"><img src="images/logo-partner-huygens.png" alt="Partner Huygens ING"></a>
     </div>
   </div>
 </div>

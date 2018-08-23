@@ -1,12 +1,17 @@
 {{> html-head}}
-<div class="huc-page ">
-  <div class="siteWrap">
-    {{> page-head}}
-    <div class="huc-page-body">
-      <nav class="huc-subnav">
-        <ul>{{-walker-}}</ul>
-        <div class="tags">
-          {{-page-categories-}}
-        </div>
-      </nav>
-      <div class="huc-content">
+<div class="huc-basic-layout">
+  <div class="huc-basic-col1">
+    <div class="huc-logo huc-page-head">
+      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
+    </div>
+
+    <nav class="huc-subnav">
+      <ul>{{-walker-}}</ul>
+    </nav>
+  </div>
+
+  <div class="huc-basic-col2">
+    <div class="top-navigation huc-page-head">
+      {{> page-top-nav}}
+    </div>
+    <div class="huc-content">

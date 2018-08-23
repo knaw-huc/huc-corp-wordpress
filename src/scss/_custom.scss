@@ -1,29 +1,12 @@
-$hucBarWidth: 8em;
-$subnavWidth: $wrapSite - $wrapText;
-$hucBarWidthHalf: $hucBarWidth / 2;
-
-// layout
 
 
-.huc-page {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
-.huc-header{
-  margin-top: 2em;
-  flex-direction: column;
-}
 
 .huc-logo img{
   width: 50px;
   height: auto;
 }
 
-.top-navigation{
-  margin-top: 1em;
-}
+
 
 .top-navigation li{
   display: inline-block;
@@ -91,9 +74,6 @@ $hucBarWidthHalf: $hucBarWidth / 2;
     height: auto;
   }
 
-  .top-navigation{
-    margin-top: 2em;
-  }
 
   .top-navigation li{
     display: inline-block;
@@ -101,7 +81,7 @@ $hucBarWidthHalf: $hucBarWidth / 2;
     margin: 0 0 0 0;
   }
   .top-navigation li a{
-    margin: 0 0 0 1em;
+    //margin: 0 0 0 1em;
   }
 
 
@@ -111,7 +91,6 @@ $hucBarWidthHalf: $hucBarWidth / 2;
   }
 
   .huc-subnav {
-    width: $subnavWidth;
     margin: 1em 0 2em 0;
   }
 
@@ -200,6 +179,7 @@ nav a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 -1em;
 }
 
 .card {
@@ -214,7 +194,7 @@ nav a {
   }
 
   .card {
-    width: calc(33% - 1em);
+    width: calc(50% - 1em);
     margin: 0 1em 1em 0;
   }
 }
@@ -263,7 +243,7 @@ nav a {
 // Homepage
 
 .bar-home{
-  width: 55%;
+
 }
 
 .huc-home-layout {
@@ -282,11 +262,57 @@ nav a {
   padding: 0 1.5em;
 }
 
-.bar-home .huc-bar-gradient {
-  width: calc(100% - #{$hucBarWidthHalf}) ;
+
+
+.homepage .huc-basic-col2 {
+
 }
 
-.bar-home .huc-bar-brown{
+
+
+@media (min-width: 1000px) {
+  .homepage .huc-basic-col2 {
+    width: calc(66% - #{$hucBarWidthHalf});
+  }
+
+  .homepage .huc-bar-gradient {
+    width: calc(66vw - #{$hucBarWidthHalf});
+    max-width: calc(66vw - #{$hucBarWidthHalf});
+    position: fixed;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1300px) {
+  .homepage .huc-basic-col2 {
+    width: calc(50% - #{$hucBarWidthHalf});
+  }
+
+
+  .homepage .huc-bar-gradient {
+    width: calc(50vw - #{$hucBarWidthHalf});
+    max-width: calc(50vw - #{$hucBarWidthHalf});
+    position: fixed;
+    height: 100vh;
+  }
+
+
+}
+
+
+// .homepage .huc-basic-col2 >* {
+//   width: 100%;
+//   max-width: 100%;
+// }
+
+
+
+
+.huc-bar-home .huc-bar-brown{
+  width: $hucBarWidthHalf ;
+}
+
+.huc-bar-home {
   width: $hucBarWidthHalf ;
 }
 

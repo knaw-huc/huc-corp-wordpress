@@ -16,17 +16,11 @@
     <meta property="og:image"         content="{{image}}" />
   </head>
   <body>
-<div class="huc-home-layout">
-
-
-  <div class="huc-home-content">
-    <div class="huc-header">
-      <div class="huc-logo">
-        <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      </div>
+<div class="huc-basic-layout homepage">
+  <div class="huc-basic-col1">
+    <div class="huc-logo huc-page-head">
+      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
     </div>
-
-
     <div class="huc-home-content-inner">
       <div class="huc-home-item">
         {{page-content}} {{page-home-tags}}
@@ -35,28 +29,29 @@
     </div>
 
   </div>
+  <div class="huc-basic-col2">
+    <div class="huc-bar-gradient">
+      <div class="top-navigation huc-page-head">
+        <nav class="top-navigation">
+          {{nav}}
+        </nav>
+      </div>
+    <div class="huc-bar-gradient-grid" id="huc-grid"></div>
+    </div>
+  </div>
 </div>
 
-<div class="huc-bar-page bar-home">
-  <div class="huc-bar-gradient">
-    <div>
-      <nav class="top-navigation">
-        {{nav}}
-      </nav>
-    </div>
-    <div class="huc-bar-gradient-grid" id="huc-grid">
-    </div>
-
-  </div>
+<div class="huc-bar-page huc-bar-home">
   <div class="huc-bar-brown">
     <div class="huc-bar-language"><a href="">nl</a> <a href="">eng</a></div>
     <div class="huc-bar-partners">
-      <a href=""><img src="images/logo-partner-IISG.png" alt="Partner IISG"></a>
-      <a href=""><img src="images/logo-partner-meertens.png" alt="Partner Meertens Instituut"></a>
-      <a href=""><img src="images/logo-partner-huygens.png" alt="Partner Huygens ING"></a>
+      <a href="https://socialhistory.org"><img src="images/logo-partner-IISG.png" alt="Partner IISG"></a>
+      <a href="http://www.meertens.knaw.nl"><img src="images/logo-partner-meertens.png" alt="Partner Meertens Instituut"></a>
+      <a href="https://www.huygens.knaw.nl"><img src="images/logo-partner-huygens.png" alt="Partner Huygens ING"></a>
     </div>
   </div>
 </div>
+
 
 
 

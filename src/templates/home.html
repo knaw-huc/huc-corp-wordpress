@@ -1,15 +1,9 @@
 {{> html-head}}
-<div class="huc-home-layout">
-
-
-  <div class="huc-home-content">
-    <div class="huc-header">
-      <div class="huc-logo">
-        <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      </div>
+<div class="huc-basic-layout homepage">
+  <div class="huc-basic-col1">
+    <div class="huc-logo huc-page-head">
+      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
     </div>
-
-
     <div class="huc-home-content-inner">
       <div class="huc-home-item">
         {{-page-content-}} {{-page-home-tags-}}
@@ -18,19 +12,20 @@
     </div>
 
   </div>
+  <div class="huc-basic-col2">
+    <div class="huc-bar-gradient">
+      <div class="top-navigation huc-page-head">
+        {{> page-top-nav}}
+      </div>
+    <div class="huc-bar-gradient-grid" id="huc-grid"></div>
+    </div>
+  </div>
 </div>
 
-<div class="huc-bar-page bar-home">
-  <div class="huc-bar-gradient">
-    <div>
-      {{> page-top-nav}}
-    </div>
-    <div class="huc-bar-gradient-grid" id="huc-grid">
-    </div>
-
-  </div>
+<div class="huc-bar-page huc-bar-home">
   {{> page-huc-bar-brown}}
 </div>
+
 
 
 

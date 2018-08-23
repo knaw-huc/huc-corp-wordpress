@@ -10,3 +10,7 @@ $colorTxt: #3e3e3e;
 $basicPadding: 1.5em;
 $wrapSite: 1100px;
 $wrapText: 700px;
+
+$hucBarWidth: 8em;
+$subnavWidth: $wrapSite - $wrapText;
+$hucBarWidthHalf: $hucBarWidth / 2;
