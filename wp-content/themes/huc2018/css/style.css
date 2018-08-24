@@ -322,10 +322,6 @@ nav ul ul {
     max-width: 600px; } }
 
 .huc-logo img {
-  width: 5em;
-  height: auto; }
-
-.huc-logo img {
   width: 50px;
   height: auto; }
 
@@ -519,6 +515,9 @@ nav a {
 
 .huc-bar-gradient-grid {
   height: calc(100vh - 150px); }
+
+.huc-top-navigation, .huc-content {
+  margin-left: 1.5em; }
 
 .gridDot {
   fill: rgba(0, 0, 0, 0.1);

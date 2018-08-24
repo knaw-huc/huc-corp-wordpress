@@ -6,6 +6,7 @@ function displayConnection($type) {
     'connected_type' => $type,
     'connected_items' => get_queried_object(),
     'nopaging' => true,
+    'sortable' => 'any',
   ) );
 
   if (strpos($type, 'staff') !== false) {
