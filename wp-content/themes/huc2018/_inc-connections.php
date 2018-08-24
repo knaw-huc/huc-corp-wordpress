@@ -36,6 +36,9 @@ function displayConnection($type) {
       $templateConnectionBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-id}}",get_the_ID(), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'medium'), $templateConnectionBuild);
+
+      $templateConnectionBuild = str_replace("{{item-staff-name}}",get_post_meta( get_the_ID(), 'wpcf-staff-name', true ), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-function}}",get_post_meta( get_the_ID(), 'wpcf-function', true ), $templateConnectionBuild);
       $output = $output.$templateConnectionBuild;
 
 
@@ -46,4 +49,10 @@ function displayConnection($type) {
   return $output;
 }
 
+// $postCustomMetastaffName = get_post_meta( get_the_ID(), 'wpcf-staff-name', true );
+// $postCustomMetaFunction = get_post_meta( get_the_ID(), 'wpcf-function', true );
+// $postCustomMetaEmail = get_post_meta( get_the_ID(), 'wpcf-email', true );
+// $postCustomMetaPhone = get_post_meta( get_the_ID(), 'wpcf-phone', true );
+// $postCustomMetaTwitter = get_post_meta( get_the_ID(), 'wpcf-twitter', true );
+// $postCustomMetaDepartment = get_post_meta( get_the_ID(), 'wpcf-department', true );
 ?>

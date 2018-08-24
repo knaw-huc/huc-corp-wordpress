@@ -169,7 +169,10 @@ nav a {
   font-size: .75em;
   padding: .1em .3em;
   border-radius: 2px;
+}
 
+.tag a{
+  color: $colorTxt;
 }
 
 
@@ -257,6 +260,23 @@ nav a {
   min-height: 66vh;
 }
 
+.huc-home-item-first {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.huc-home-hero-text {
+  margin: 0 0 3em 0;
+}
+
+.huc-home-tags {
+  margin: 2em 0;
+}
+
+
+
 .huc-home-content .huc-home-content-inner{
   max-width: $wrapText;
   padding: 0 1.5em;
@@ -298,13 +318,6 @@ nav a {
 
 
 }
-
-
-// .homepage .huc-basic-col2 >* {
-//   width: 100%;
-//   max-width: 100%;
-// }
-
 
 
 

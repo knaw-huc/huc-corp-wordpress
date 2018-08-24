@@ -1,12 +1,21 @@
 {{> html-head}}
 <div class="huc-basic-layout homepage">
   <div class="huc-basic-col1">
-    <div class="huc-logo huc-page-head">
-      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-    </div>
+
     <div class="huc-home-content-inner">
-      <div class="huc-home-item">
-        {{-page-content-}} {{-page-home-tags-}}
+
+      <div class="huc-home-item huc-home-item-first">
+        <div class="huc-logo huc-page-head">
+          <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
+        </div>
+        <div class="huc-home-hero-text">
+          {{-page-content-}}
+        </div>
+
+        <div class="huc-home-tags">
+          {{-site-categories-}}
+        </div>
+
       </div>
        {{-items-homepage-}}
     </div>

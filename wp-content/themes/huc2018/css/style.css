@@ -296,9 +296,9 @@ nav ul ul {
   .huc-basic-layout {
     flex-direction: row; }
   .huc-basic-col1 {
-    width: 33%; }
+    width: 34%; }
   .huc-basic-col1 > * {
-    width: 250px; }
+    width: 300px; }
   .huc-basic-col2 {
     width: 66%;
     width: calc(66% - 8em); }
@@ -426,6 +426,9 @@ nav a {
   padding: .1em .3em;
   border-radius: 2px; }
 
+.tag a {
+  color: #3e3e3e; }
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -484,6 +487,18 @@ nav a {
 
 .huc-home-item {
   min-height: 66vh; }
+
+.huc-home-item-first {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.huc-home-hero-text {
+  margin: 0 0 3em 0; }
+
+.huc-home-tags {
+  margin: 2em 0; }
 
 .huc-home-content .huc-home-content-inner {
   max-width: 700px;
