@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
 }
 
 .huc-basic-col1 > *{
@@ -25,11 +26,18 @@
 }
 
 .huc-page-head {
+  height: 33vh;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
-
+  margin-bottom: 0em;
 }
+
+.homepage .huc-page-head {
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0em;
+  }
 
 @media (min-width: 1000px) {
   .huc-basic-layout {
@@ -47,20 +55,24 @@
   .huc-basic-col2 {
     width: 66%;
     width: calc(66% - #{$hucBarWidth}) ;
+    max-width: calc(66% - #{$hucBarWidth}) ;
 
   }
 
   .huc-basic-col2 > *{
-    max-width: 600px;
+    width: calc(100% - #{$hucBarWidthHalf}) ;
+    max-width: calc(100% - #{$hucBarWidthHalf}) ;
   }
+
   .huc-page-head {
     height: 33vh;
     display: flex;
     align-items: center;
     margin-bottom: 0em;
-
   }
 }
+
+
 
 @media (min-width: 1300px) {
   .huc-basic-layout {
@@ -81,6 +93,7 @@
   }
 
   .huc-basic-col2 > *{
-    max-width: 600px;
+    width: calc(100% - #{$hucBarWidthHalf}) ;
+    max-width: calc(100% - #{$hucBarWidthHalf}) ;
   }
 }

@@ -20,11 +20,11 @@
   <div class="huc-basic-col1">
     <div class="huc-logo huc-page-head">
       <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      <div class="icon"><img src="images/icons/menu.svg" alt=""></div>
+      <div class="icon hamburger js-open-menu"><img src="images/icons/menu.svg" alt=""></div>
     </div>
 
     <nav class="huc-subnav">
-      <ul>{{walker}}</ul>
+      {{walker}}
     </nav>
   </div>
 
@@ -67,7 +67,7 @@
   <div class="wrppr">
     <div class="huc-logo huc-page-head">
       <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      <div class="icon"><img src="images/icons/close.svg" alt=""></div>
+      <div class="icon js-close-menu"><img src="images/icons/close.svg" alt=""></div>
     </div>
     <div class="pop-navigation-top">
       {{nav}}
@@ -80,6 +80,6 @@
 
 
 </div>
-    
+  <script src="js/navigation.js" charset="utf-8"></script>
   </body>
 </html>
