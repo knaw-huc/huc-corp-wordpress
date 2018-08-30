@@ -1,11 +1,18 @@
 
-
+.huc-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .huc-logo img{
-  width: 50px;
+  width: 100px;
   height: auto;
 }
 
+.hamburger {
+  display: block;
+}
 
 
 .top-navigation li{
@@ -257,15 +264,31 @@ nav a {
 }
 
 .huc-home-item {
-  min-height: 66vh;
+
 }
 
 .huc-home-item-first {
-  min-height: 95vh;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+@media (min-width: 1000px) {
+  .huc-home-item {
+    min-height: 66vh;
+  }
+
+  .huc-home-item-first {
+    min-height: 95vh;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+
 
 .huc-home-hero-text {
   margin: 0 0 3em 0;
@@ -288,6 +311,12 @@ nav a {
 
 }
 
+.homepage .huc-bar-gradient {
+  width: 100%;
+  max-width: 100%;
+  height: 50vh;
+
+}
 
 
 @media (min-width: 1000px) {
@@ -300,6 +329,7 @@ nav a {
     max-width: calc(66vw - #{$hucBarWidthHalf});
     position: fixed;
     height: 100vh;
+    left: 34vw;
   }
 }
 
@@ -314,6 +344,7 @@ nav a {
     max-width: calc(50vw - #{$hucBarWidthHalf});
     position: fixed;
     height: 100vh;
+    left: 50vw;
   }
 
 
@@ -335,4 +366,10 @@ nav a {
 
 .huc-top-navigation, .huc-content {
   margin-left: 1.5em;
+}
+
+.icon img{
+  height: 1rem;
+  width: auto;
+
 }

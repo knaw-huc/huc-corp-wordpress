@@ -9,4 +9,6 @@ $walkerMenu = wp_nav_menu( array(
   'after' => '',
   'container_class' => false
 ) );
+
+$walkerMenu = '<ul>'.$walkerMenu.'</ul>';
 ?>

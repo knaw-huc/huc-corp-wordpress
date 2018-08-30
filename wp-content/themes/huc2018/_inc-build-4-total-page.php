@@ -16,6 +16,7 @@ $template =  file_get_contents(get_bloginfo('template_directory').'/'.$templateP
 //general
 $template = str_replace('{{nav}}',$headerMenu, $template);
 $template = str_replace('{{walker}}',$walkerMenu, $template);
+$template = str_replace('{{nav-with-sub}}', $headerMenuWithSub, $template);
 $template = str_replace("{{site-name}}",get_bloginfo('name'), $template);
 
 

@@ -1,62 +1,43 @@
-$navWidth: 300px;
 
-nav{
-  display:flex;
-  flex-direction: column;
-}
-
-nav a {
-  margin-bottom: .5em;
-}
-
-nav ul {
-  margin:0em 0em 0em -3em;
-}
-
-nav li {
-  margin:0em 0em 0em 1em;
-  list-style: none;
-
-}
-
-nav li li{
-  margin:0em 0em 0em 2em;
-}
-
-.site-nav {
-  padding: $basicPadding;
-  box-sizing: border-box;
-  z-index: 200;
+.pop-navigation {
   width: 100vw;
-  color: #fff;
   height: 100vh;
-  margin-left: $navWidth - 0px;
-  position:fixed;
-  background-color: #f4d497;
-
-
-
-  transition-property: margin-left;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1.5em;
+  background-color: #f1f1f1;
+  font-size: 1.3rem;
+  line-height: 160%;
+  display: none;
 }
 
-.site-nav a{
-  color: $colorGreyDark;
+.pop-navigation .huc-logo {
+
 }
 
-@media (min-width: 400px) {
-  .site-nav {
-    position:fixed;
-    height: 100vh;
-    width: $navWidth;
-    overflow-y: auto;
-    margin-left: $navWidth - 0px;
-  }
+.pop-navigation li {
+  list-style: none;
+  margin: 0 0 0 0;
 }
 
-@media (min-width: 1100px) {
-.site-nav {
-  background: none;
-  }
+.pop-navigation-top {
+  margin: 1rem 0 2em 0;
+}
+
+.pop-navigation-top a{
+  color: $colorTxt;
+  font-weight: 700;
+  margin: 0 0 1em 0;
+
+}
+.pop-navigation-sub a{
+  margin: 0 0 1em 0;
+  color: $colorGreyMid;
+}
+
+.wrppr {
+  overflow-x: scroll;
+  height: 100vh;
+  width: 260px;
 }
