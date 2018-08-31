@@ -624,6 +624,10 @@ nav a {
   height: 1rem;
   width: auto; }
 
+.huc-content img {
+  width: 100%;
+  height: auto; }
+
 .gridDot {
   fill: rgba(0, 0, 0, 0.1);
   transition: all 1s ease;
