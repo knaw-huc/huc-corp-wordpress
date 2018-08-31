@@ -12,7 +12,7 @@ $template = str_replace('{{items-projects-results}}', $allProjectItemsTotal_resu
 $template = str_replace('{{items-publications}}', $allPublicationItems, $template);
 $template = str_replace('{{items-publications-results}}', $allPublicationItemsTotal_results.' results', $template);
 
-$template = str_replace('{{items-research-pages}}', $allResearchPages, $template);
+$template = str_replace('{{items-research-pages}}', '<div class="cards-span"><div class="cards">'.$allResearchPages.'</div></div>', $template);
 $template = str_replace('{{items-homepage}}', $allHomeItems, $template);
 
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
@@ -21,14 +21,14 @@ $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.'
 // Connections
 $template = str_replace('{{connect-publications-staff}}', displayConnection('publications-staff'), $template);
 $template = str_replace('{{connect-publications-project}}', displayConnection('publications-projects'), $template);
-$template = str_replace('{{connect-staff-projects}}', displayConnection('staff-projects'), $template);
+$template = str_replace('{{connect-staff-projects}}', '<h2>Staff2</h2><div class="cards">'.displayConnection('staff-projects').'</div>', $template);
 $template = str_replace('{{connect-staff-products}}', displayConnection('staff-products'), $template);
 $template = str_replace('{{connect-partner-products}}', displayConnection('partner-products'), $template);
 $template = str_replace('{{connect-partner-projects}}', displayConnection('partner-projects'), $template);
 
-$template = str_replace('{{connect-page-projects}}', displayConnection('page-projects'), $template);
-$template = str_replace('{{connect-staff-page}}', displayConnection('staff-page'), $template);
-$template = str_replace('{{connect-publications-page}}', displayConnection('publications-page'), $template);
+$template = str_replace('{{connect-page-projects}}', '<h2>Projects</h2><div class="cards">'.displayConnection('page-projects').'</div>', $template);
+$template = str_replace('{{connect-staff-page}}', '<h2>Staff</h2><div class="cards">'.displayConnection('staff-page').'</div>', $template);
+$template = str_replace('{{connect-publications-page}}', '<h2>Publications</h2><div class="cards">'.displayConnection('publications-page').'</div>', $template);
 
 
 // external content from github
