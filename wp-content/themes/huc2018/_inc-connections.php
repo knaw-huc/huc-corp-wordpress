@@ -39,6 +39,8 @@ function displayConnection($type) {
 
       $templateConnectionBuild = str_replace("{{item-staff-name}}",get_post_meta( get_the_ID(), 'wpcf-staff-name', true ), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-function}}",get_post_meta( get_the_ID(), 'wpcf-function', true ), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-phone}}",get_post_meta( get_the_ID(), 'wpcf-phone', true ), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-email}}",get_post_meta( get_the_ID(), 'wpcf-email', true ), $templateConnectionBuild);
       $output = $output.$templateConnectionBuild;
 
 

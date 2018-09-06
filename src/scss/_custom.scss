@@ -219,7 +219,19 @@ nav a {
   padding: 1em;
   width: 100%;
   margin: 0 0 1em 0em;
+  display: flex;
+  flex-direction: column;
 }
+.card-label {
+  width: 3em;
+  display: inline-block;
+  color: $colorGreyMid;
+}
+.item-extra {
+  font-size: .9rem;
+  line-height: 150%;
+}
+
 @media (min-width: 800px) {
   .cards {
     flex-direction: row;
