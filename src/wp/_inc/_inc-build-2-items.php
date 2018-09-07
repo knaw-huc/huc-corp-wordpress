@@ -36,6 +36,10 @@ if ( have_posts() ) :
     $templatePostsBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-id}}",get_the_ID(), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'medium'), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-staff-name}}",get_post_meta( get_the_ID(), 'wpcf-staff-name', true ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-function}}",get_post_meta( get_the_ID(), 'wpcf-function', true ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-phone}}",get_post_meta( get_the_ID(), 'wpcf-phone', true ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{item-email}}",get_post_meta( get_the_ID(), 'wpcf-email', true ), $templatePostsBuild);
     $$varName = $$varName.$templatePostsBuild;
   endwhile;
 
