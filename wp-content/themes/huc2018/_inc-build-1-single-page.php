@@ -9,7 +9,7 @@ if (have_posts()) : while (have_posts()) : the_post();
   $postExcerpt = get_the_excerpt();
 
   include('_inc-z-custom-build-custom-fields.php');
-
+  //include('_inc-txt-github.php'); 
   include('_inc-page-categories.php');    //  get page catergories
   include('_inc-connections.php');        //  get connections from other custom post types
 

@@ -32,10 +32,6 @@ $template = str_replace('{{connect-publications-page}}', '<h2>Publications</h2><
 
 
 // external content from github
-$template = str_replace('{{external-content-product-about}}', $Parsedown->text(getGithubTxt($postCustomMetaGithubName, '-about.md')), $template);
-$template = str_replace('{{external-content-product-definition}}', $Parsedown->text(getGithubTxt($postCustomMetaGithubName, '-definition.md')), $template);
-$template = str_replace('{{external-content-product-features}}', $Parsedown->text(getGithubTxt($postCustomMetaGithubName, '-features.md')), $template);
-$template = str_replace('{{external-content-product-technology}}', $Parsedown->text(getGithubTxt($postCustomMetaGithubName, '-technology.md')), $template);
-$template = str_replace('{{external-content-product-pitch}}', $Parsedown->text(getGithubTxt($postCustomMetaGithubName, '-pitch.md')), $template);
+
 
 ?>
