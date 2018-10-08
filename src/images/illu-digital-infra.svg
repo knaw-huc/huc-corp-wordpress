@@ -1,0 +1,186 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1716.1 1323.03">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(3, 219, 232);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(221, 242, 121);stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .bg {
+
+      }
+      .dashLine {
+        stroke: #fff;
+        fill: none;
+        stroke-width: 5px;
+        stroke-dasharray: 10;
+        animation: dash 40s linear;
+        stroke-linecap: round;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: -1000;
+        }
+      }
+
+      .frame {
+        fill: #503c25;
+      }
+
+      .paper {
+        fill: #dabb96;
+      }
+
+      .basicLine {
+        stroke: #000000;
+        stroke-width: 10px;
+
+      }
+
+
+
+
+      .cls-1 {
+        fill: #e8e8e8;
+        stroke: #6f6e8a;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-6, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #4d4d4d;
+        stroke-width: 5px;
+      }
+
+      .cls-2, .cls-8 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-7, .cls-8 {
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-6, .cls-9 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-6 {
+        stroke-width: 10px;
+      }
+
+      .cls-4, .cls-7, .cls-8 {
+        stroke: #878787;
+        stroke-width: 4px;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 5 10;
+      }
+
+      .cls-9 {
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <title>illu-digital-infra</title>
+  <polygon id="Bg" class="bg" points="1715.6 1322.53 0.5 1321.53 0.5 0.53 1715.6 109.43 1715.6 1322.53" fill="url(#grad1)"/>
+  <g id="Infra">
+    <line id="Line2" class="dashLine" x1="476.95" y1="869.24" x2="840.6" y2="869.24"/>
+    <polyline id="line1" class="dashLine" points="1304.33 1113.53 840.6 1115.35 840.6 494.72"/>
+  </g>
+  <g id="Painting">
+    <path class="frame basicLine" d="M285.7,953.37H460.51a9.31,9.31,0,1,0,12.25-12.25V716a9.31,9.31,0,1,0-12.25-12.26H285.7A9.31,9.31,0,1,0,273.44,716V941.12a9.31,9.31,0,1,0,12.26,12.25Z" transform="translate(-1.4 0.53)"/>
+    <g>
+      <polyline id="Profile" class="dashLine" points="293.66 877.2 296.82 871.34 311.23 867.29 317.76 865.26 328.58 864.36 345.69 856.7 344.34 853.55 343.44 844.54 339.84 837.33 339.39 829.22 338.71 819.09 334.21 819.09 328.35 815.03 329.25 804.22 331.05 796.56 327.9 786.65 327 778.54 329.25 763.67 338.26 755.11 347.27 744.3 359.89 735.74 373.85 732.14 385.56 732.14 392.45 737.09 396.83 737.09 404.49 739.8 411.24 744.3 416.2 749.26 425.66 753.76 432.42 758.27 436.92 765.48 445.03 780.79 445.03 787.1 445.03 801.51 441.43 811.43 441.43 819.99 438.72 827.19 435.12 835.3 431.06 842.06 427.46 856.03 422.06 859.63 418.38 863.92 410.94 861.89 404.04 877.2 399.98 889.81 401.78 895.22 408.09 911.44 416.2 927.21 424.76 935.76 437.87 949.18"/>
+      <polyline class="dashLine" points="344.88 811.39 349.39 809.13 354.8 809.13 359.76 810.26 359.76 814.1 358.18 817.03 356.6 826.95 354.8 830.33 356.15 834.16 359.76 836.19 364.49 837.09 369.35 835.08 374.41 834.16 378.81 833.03 384.56 840.25 384.56 842.5 380.5 842.5 372.61 843.63 366.52 843.18 361.56 842.5 358.4 842.5 359.31 846.56 364.05 851.64 371.5 852.67 378.81 851.39 383.06 848.59 385.01 847.24 385.69 845.21"/>
+      <polyline class="dashLine" points="377.79 810.71 381.85 809.13 385.69 809.13 388.84 809.92 392.22 811.62"/>
+      <polyline class="dashLine" points="347.09 858.84 350.17 864.49 355.57 871.94 364.05 877.08 374.84 879.65 385.01 877.6 392.22 873.23 401.31 867.83 405.42 864.49"/>
+    </g>
+  </g>
+  <g id="Archive">
+    <g>
+      <path class="cls-5" d="M1305.74,1092.88a5,5,0,0,1-4.7-6.71l20-55a5,5,0,0,1,4.7-3.29h199.67a5,5,0,0,1,4.7,3.29l20,55a5,5,0,0,1-4.7,6.71Z" transform="translate(-1.4 0.53)"/>
+      <path d="M1525.41,1032.88l20,55H1305.74l20-55h199.67m0-10H1325.74a10,10,0,0,0-9.4,6.58l-20,55a10,10,0,0,0,9.4,13.42h239.67a10,10,0,0,0,9.4-13.42l-20-55a10,10,0,0,0-9.4-6.58Z" transform="translate(-1.4 0.53)"/>
+    </g>
+    <g id="file">
+      <g>
+        <g>
+          <rect class="paper" x="1338.39" y="928.03" width="133.99" height="193.89"/>
+          <path d="M1468.78,932.49v183.89h-124V932.49h124m10-10h-144v203.89h144V922.49Z" transform="translate(-1.4 0.53)"/>
+        </g>
+        <path class="cls-6" d="M1450,959" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1363.6,959" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1431.16,972.2" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1363.6,972.2" transform="translate(-1.4 0.53)"/>
+      </g>
+      <line id="txtLine" class="dashLine" x2="1362.2" y2="959.5" x1="1448.57" y1="959.5"/>
+      <line id="txtLine-2" data-name="txtLine" class="dashLine" x2="1362.2" y2="984.32" x1="1448.57" y1="984.32"/>
+      <line id="txtLine-3" data-name="txtLine" class="dashLine" x2="1362.2" y2="1009.14" x1="1448.57" y1="1009.14"/>
+      <line id="txtLine-4" data-name="txtLine" class="dashLine" x2="1362.2" y2="1033.96" x1="1448.57" y1="1033.96"/>
+    </g>
+    <g id="file-2" data-name="file">
+      <g>
+        <g>
+          <rect class="paper" x="1381.58" y="1009.34" width="133.99" height="193.89"/>
+          <path d="M1512,1013.81V1197.7H1388V1013.81h124m10-10H1378V1207.7h144V1003.81Z" transform="translate(-1.4 0.53)"/>
+        </g>
+        <path class="cls-6" d="M1493.16,1040.27" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1406.78,1040.27" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1474.35,1053.51" transform="translate(-1.4 0.53)"/>
+        <path class="cls-6" d="M1406.78,1053.51" transform="translate(-1.4 0.53)"/>
+      </g>
+      <line id="txtLine-5" data-name="txtLine" class="dashLine" x2="1405.38" y2="1040.81" x1="1491.75" y1="1040.81"/>
+      <line id="txtLine-6" data-name="txtLine" class="dashLine" x2="1405.38" y2="1065.63" x1="1491.75" y1="1065.63"/>
+      <line id="txtLine-7" data-name="txtLine" class="dashLine" x2="1405.38" y2="1090.45" x1="1491.75" y1="1090.45"/>
+      <line id="txtLine-8" data-name="txtLine" class="dashLine" x2="1405.38" y2="1115.27" x1="1491.75" y1="1115.27"/>
+    </g>
+    <g>
+      <rect class="cls-5" x="1299.33" y="1088.81" width="249.68" height="171.6"/>
+      <path d="M1545.41,1093.28v161.6H1305.74v-161.6h239.67m10-10H1295.74v181.6h259.67v-181.6Z" transform="translate(-1.4 0.53)"/>
+    </g>
+    <rect class="cls-6" x="1371.97" y="1121.96" width="104.4" height="28.14" rx="5" ry="5"/>
+  </g>
+  <g id="Monitor">
+    <g>
+      <path class="cls-3" d="M754.22,494h-9.34A63.08,63.08,0,0,0,754.22,494Z" transform="translate(-1.4 0.53)"/>
+      <path class="cls-3" d="M939.12,494h-9.34A63.08,63.08,0,0,0,939.12,494Z" transform="translate(-1.4 0.53)"/>
+      <path class="cls-3" d="M887.47,464.45c-8.8-33.75-8.87-71.91-8.87-71.91H805.4s-.07,38.16-8.87,71.91c-6.19,23.71-29.18,28.7-42.31,29.57H929.78C916.65,493.15,893.66,488.16,887.47,464.45Z" transform="translate(-1.4 0.53)"/>
+    </g>
+    <g>
+      <rect class="cls-5" x="606.91" y="155" width="467.37" height="266.81"/>
+      <path d="M1070.68,159.47V416.28H613.32V159.47h457.36m5-10H608.32a5,5,0,0,0-5,5V421.28a5,5,0,0,0,5,5h467.36a5,5,0,0,0,5-5V154.47a5,5,0,0,0-5-5Z" transform="translate(-1.4 0.53)"/>
+    </g>
+    <g id="jSahWb">
+      <image id="jSahWb-2" data-name="jSahWb" width="784" height="908" transform="translate(611.32 160.22) scale(0.28)" xlink:href="rembrandt.png"/>
+    </g>
+    <g>
+      <line class="cls-9" x1="888" y1="236.46" x2="1020.22" y2="236.46"/>
+      <line class="cls-6" x1="888" y1="264.87" x2="1020.22" y2="264.87"/>
+      <line class="cls-6" x1="888" y1="285.76" x2="1020.22" y2="285.76"/>
+      <line class="cls-6" x1="888" y1="306.64" x2="989.13" y2="306.64"/>
+      <line class="cls-6" x1="888" y1="326.88" x2="1020.22" y2="326.88"/>
+      <line class="cls-6" x1="888" y1="347.76" x2="969.4" y2="347.76"/>
+    </g>
+  </g>
+  <g id="Agents">
+    <g>
+      <circle class="cls-5" cx="840.6" cy="706.44" r="94.59"/>
+      <path d="M842,616.32a89.59,89.59,0,1,1-89.59,89.59A89.59,89.59,0,0,1,842,616.32m0-10a99.59,99.59,0,1,0,99.59,99.59A99.7,99.7,0,0,0,842,606.32Z" transform="translate(-1.4 0.53)"/>
+    </g>
+    <g>
+      <path d="M816.33,707.78l-.94.3.94.33,10.93,4.21v3.5l-15.14-6.77v-2.6L827.26,700v3.5Z" transform="translate(-1.4 0.53)"/>
+      <path d="M838.49,721.85h-3l10.85-28.23h3Z" transform="translate(-1.4 0.53)"/>
+      <path d="M856.15,703.39V700l15.76,6.75v2.6l-15.76,6.77v-3.43l11.55-4.35,1.07-.31-1.07-.34Z" transform="translate(-1.4 0.53)"/>
+    </g>
+  </g>
+</svg>
