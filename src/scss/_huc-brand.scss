@@ -1,13 +1,11 @@
 
 .huc-bar-gradient {
-  width: 50%;
   background-image: -moz-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
   background-image: -webkit-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
   background-image: -ms-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
 }
 
 .huc-bar-brown{
-  width: 50%;
   background-color: $colorTertiary;
   display: flex;
   flex-direction: column;

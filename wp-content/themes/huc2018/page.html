@@ -16,38 +16,25 @@
     <meta property="og:image"         content="{{image}}" />
   </head>
   <body>
-<div class="huc-basic-layout">
-  <div class="huc-basic-col1">
-    <div class="huc-logo huc-page-head">
-      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      <div class="icon hamburger js-open-menu"><img src="images/icons/menu.svg" alt=""></div>
-    </div>
+<div class="huc-layout-basic-page">
 
-    <nav class="huc-subnav">
-      {{walker}}
-    </nav>
-  </div>
+  <div class="branding-logo vertical-mid"><a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a></div>
 
-  <div class="huc-basic-col2">
-    <div class="huc-top-navigation huc-page-head">
-      <nav class="top-navigation">
-        {{nav}}
-      </nav>
-    </div>
-    <div class="huc-content">
-
-        <h1>{{page-title}}</h1>
-        {{page-content}}
-
-  {{page-categories}}
-
-    </div>
-  </div>
-
+    <div class="navigation-top vertical-mid"><nav class="top-navigation">
+  {{nav}}
+</nav>
 </div>
-<div class="huc-bar-page">
-  <div class="huc-bar-gradient"></div>
-  <div class="huc-bar-brown">
+
+    <div class="navigation-sub huc-subnav">{{walker}}</div>
+
+    <div class="content-main"><h1>{{page-title}}</h1> {{page-content}}</div>
+
+    <div class="cards-bg"><img src="images/dot-pattern.svg" alt="" style="width:100%; height: 100%;"></div>
+    <div class="content-cards card-grid"></div>
+
+  </div>
+  <div class="bar-gr huc-bar-gradient"></div>
+  <div class="bar-br huc-bar-brown">
     <div class="huc-bar-language"><a href="">nl</a> <a href="">eng</a></div>
     <div class="huc-bar-partners">
       <a href="https://socialhistory.org"><img src="images/logo-partner-IISG.png" alt="Partner IISG"></a>
@@ -55,26 +42,9 @@
       <a href="https://www.huygens.knaw.nl"><img src="images/logo-partner-huygens.png" alt="Partner Huygens ING"></a>
     </div>
   </div>
-</div>
-<div class="pop-navigation">
 
+  {{page-categories}}
 
-  <div class="wrppr">
-    <div class="huc-logo huc-page-head">
-      <a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a>
-      <div class="icon js-close-menu"><img src="images/icons/close.svg" alt=""></div>
-    </div>
-    <div class="pop-navigation-top">
-      {{nav}}
-    </div>
-    <div class="pop-navigation-sub">
-      {{walker}}
-    </div>
-
-  </div>
-
-
-</div>
   <script src="js/navigation.js" charset="utf-8"></script>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-90872465-1', 'auto'); ga('send', 'pageview');</script>
   </body>
