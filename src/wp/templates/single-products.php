@@ -1,5 +1,5 @@
 <?php
-$templatePage = 'single-products.html';
+$templatePage = 'page.html';
 
 include('_inc-build-1-single-page.php');
 // Handle items  item file | post type | number of items | variable name | Search word

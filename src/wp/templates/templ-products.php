@@ -2,7 +2,7 @@
 <?php
 
 // Handle basic page
-$templatePage = 'templ-products.html';
+$templatePage = 'page-big-list.html';
 include('_inc-build-1-single-page.php');
 
 

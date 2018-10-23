@@ -1,4 +1,4 @@
-.card-grid {
+.card-grid, .card-grid-inline {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -16,16 +16,26 @@
 }
 
 @media (min-width: 800px) {
-  .card-grid {
+  .card-grid, .card-grid-inline {
     flex-direction: row;
   }
 
-  .card {
+  .card-grid .card {
     width: calc(33% - #{($basicPadding * 2)/3});
     margin: 0 #{$basicPadding} #{$basicPadding} 0;
   }
-  .card:nth-child(3n+3) {
+  .card-grid .card:nth-child(3n+3) {
     width: calc(33% - #{($basicPadding * 2)/3});
+    margin: 0 0 #{$basicPadding} 0;
+  }
+
+
+  .card-grid-inline .card {
+    width: calc(50% - #{($basicPadding * 1)/2});
+    margin: 0 #{$basicPadding} #{$basicPadding} 0;
+  }
+  .card-grid-inline .card:nth-child(2n+2) {
+    width: calc(50% - #{($basicPadding * 1)/2});
     margin: 0 0 #{$basicPadding} 0;
   }
 }

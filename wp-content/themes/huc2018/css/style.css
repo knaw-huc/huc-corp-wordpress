@@ -163,7 +163,7 @@ nav a {
   flex-direction: column;
   justify-content: center; }
 
-.card-grid {
+.card-grid, .card-grid-inline {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -178,13 +178,19 @@ nav a {
   flex-direction: column; }
 
 @media (min-width: 800px) {
-  .card-grid {
+  .card-grid, .card-grid-inline {
     flex-direction: row; }
-  .card {
+  .card-grid .card {
     width: calc(33% - 1em);
     margin: 0 1.5em 1.5em 0; }
-  .card:nth-child(3n+3) {
+  .card-grid .card:nth-child(3n+3) {
     width: calc(33% - 1em);
+    margin: 0 0 1.5em 0; }
+  .card-grid-inline .card {
+    width: calc(50% - 0.75em);
+    margin: 0 1.5em 1.5em 0; }
+  .card-grid-inline .card:nth-child(2n+2) {
+    width: calc(50% - 0.75em);
     margin: 0 0 1.5em 0; } }
 
 .alignleft {
@@ -414,7 +420,7 @@ nav ul ul {
     -ms-grid-columns: auto 33% calc(66% - 8em) auto 4em 4em;
     -ms-grid-rows: 30vh auto auto auto;
     display: grid;
-    grid-template-columns: auto minmax(150px, 350px) minmax(400px, 700px) auto 4em 4em;
+    grid-template-columns: auto minmax(150px, 300px) minmax(450px, 700px) auto 4em 4em;
     grid-template-rows: 30vh auto auto auto; }
   .huc-layout-basic-page > * {
     width: 100%;

@@ -24,7 +24,7 @@
     -ms-grid-rows:  30vh auto auto auto;
 
     display: grid;
-    grid-template-columns:  auto minmax(150px, 350px) minmax(400px, 700px) auto  #{$barWidth} #{$barWidth};
+    grid-template-columns:  auto minmax(150px, 300px) minmax(450px, 700px) auto  #{$barWidth} #{$barWidth};
     grid-template-rows:  30vh auto auto auto;
   }
 
