@@ -6,6 +6,8 @@ $templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$temp
 
 if ($postType == 'page') {
   $order = 'menu_order';
+}elseif ($postType == 'post') {
+  $order = 'date';
 }else {
   $order = 'ID';
 }

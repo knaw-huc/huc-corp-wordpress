@@ -37,5 +37,9 @@ if ($allProductItems != "") {
 if ($allResearchPages != "") {
   $template = str_replace('{{cards}}', $allResearchPages, $template);
 }
+if ($allNewsItems != "") {
+  $template = str_replace('{{cards}}', $allNewsItems, $template);
+}
 
+$allPostItems
 ?>
