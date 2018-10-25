@@ -521,7 +521,7 @@ nav ul ul {
   grid-row: 1; }
 
 @media (min-width: 500px) {
-  .animation-home {
+  .gradient-bg {
     width: calc(100vw - 4em);
     height: calc(66vw - 4em);
     z-index: -1; } }
@@ -812,6 +812,6 @@ nav a {
   margin-top: .5rem; }
 
 .gridDot {
-  fill: rgba(0, 0, 0, 0.1);
+  fill: #fff;
   transition: all 1s ease;
   transform-origin: 50% 50%; }
