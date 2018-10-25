@@ -10,7 +10,7 @@ include('_inc-build-1-single-page.php');
 $lists = array
   (
 
-    array('item-card.html','products','10','DESC', 'allProductItems')
+    array('item-product.html','products','10','DESC', 'allProductItems')
 
 
   );

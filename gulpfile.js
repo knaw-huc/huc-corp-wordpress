@@ -15,6 +15,7 @@ var gulp = require('gulp'),
     md   = require('gulp-remarkable'),
     imageResize = require('gulp-image-resize'),
     replace = require('gulp-replace');
+    useref = require('gulp-useref');
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 const using = require('gulp-using');
@@ -185,6 +186,7 @@ if (!wp) {
                   .pipe(plumber())
                   .pipe(handlebars(page, options))
                   .pipe(rename(fileName + ".html"))
+                  .pipe(useref())
                   .pipe(gulp.dest(dst));
           }
   });
@@ -197,6 +199,7 @@ if (!wp) {
       .pipe(handlebars(siteJson, options))
       .pipe(replace('$<$', '{{'))
       .pipe(replace('$>$', '}}'))
+      .pipe(useref())
       .pipe(gulp.dest(dst));
 
   });

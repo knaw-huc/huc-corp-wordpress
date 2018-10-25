@@ -1,15 +1,16 @@
 
-.huc-logo{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.huc-logo img{
-  width: 50px;
+.branding-logo img{
+  width: 75px;
   height: auto;
+  margin-top: 2em;
 }
 
+@media (min-width: 800px) {
+  .branding-logo img{
+    width: 100px;
+    margin-top: 0em;
+  }
+}
 
 
 .hamburger {
@@ -420,6 +421,15 @@ nav a {
   background-color: rgba(#2810be, 0.22);
 }
 
-.content-cards {
-  padding: 3rem 0;
+
+@media (min-width: 800px) {
+  .content-cards {
+    padding: 3rem 0;
+  }
+}
+
+.institute-logo {
+  width: 50px;
+  height: auto;
+  margin-top: .5rem;
 }

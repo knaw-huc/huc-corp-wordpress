@@ -1,46 +1,37 @@
-{{> html-head}}
-<div class="huc-basic-layout homepage">
-  <div class="huc-basic-col1">
+{{> page-template-header}}
+    <div class="white-left">&nbsp;</div>
+    <div class="navigation-top vertical-mid">{{> page-top-nav}}</div>
+    <div class="gradient-bg huc-bar-gradient">
+      <div class="animation-grid" id="grid">.</div>
+    </div>
 
-    <div class="huc-home-content-inner">
-
-      <div class="huc-home-item huc-home-item-first">
-        {{> page-logo-hamburger}}
-
-
-        <div class="huc-bar-gradient">
-          <div class="huc-top-navigation huc-page-head">
-            {{> page-top-nav}}
-          </div>
-        <div class="huc-bar-gradient-grid" id="huc-grid"></div>
-        </div>
-
-
-        <div class="huc-home-hero-text">
-          {{-page-content-}}
-        </div>
-
+    <div class="content-home">
+      <div class="huc-home-hero-text">
+        {{-page-content-}}
         <div class="huc-home-tags">
           {{-site-categories-}}
         </div>
-
       </div>
-       {{-items-homepage-}}
+
+     {{-items-homepage-}}
     </div>
 
-  </div>
-  <div class="huc-basic-col2">
 
-  </div>
-</div>
 
-<div class="huc-bar-page huc-bar-home">
+  <div id="getW">&nbsp;</div>
+  </div>
+
   {{> page-huc-bar-brown}}
-</div>
-{{> page-navigation-hamburger}}
+
+{{> page-template-footer}}
 
 
-
-
-<script src="js/huc-grid.js" charset="utf-8"></script>
-{{> html-footer}}
+<!-- build:js js/js-home.js -->
+<script src="../js/width.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/00-init-svg.js"></script>
+<script type="text/javascript" src="../js/01-coors-illu01.js"></script>
+<script type="text/javascript" src="../js/02-svg-content.js"></script>
+<script type="text/javascript" src="../js/03-place-items.js"></script>
+<script type="text/javascript" src="../js/func-random-coors.js"></script>
+<script type="text/javascript" src="../js/func-random.js"></script>
+<!-- endbuild -->

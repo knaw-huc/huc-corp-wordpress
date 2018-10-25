@@ -171,11 +171,12 @@ nav a {
 
 .card {
   background-color: #fafafa;
-  padding: 1em;
+  padding: 1rem;
   width: 100%;
   margin: 0 0 1.5em 0em;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-radius: 4px; }
 
 @media (min-width: 800px) {
   .card-grid, .card-grid-inline {
@@ -192,6 +193,12 @@ nav a {
   .card-grid-inline .card:nth-child(2n+2) {
     width: calc(50% - 0.75em);
     margin: 0 0 1.5em 0; } }
+
+.card-color {
+  padding: 3em 1.5em 1.5em;
+  background-image: -moz-linear-gradient(115deg, #91e6c2 5%, #e9f7a7 100%);
+  background-image: -webkit-linear-gradient(115deg, #91e6c2 5%, #e9f7a7 100%);
+  background-image: -ms-linear-gradient(115deg, #91e6c2 5%, #e9f7a7 100%); }
 
 .alignleft {
   float: left;
@@ -403,12 +410,12 @@ nav ul ul {
 
 .huc-layout-basic-page {
   display: flex;
-  flex-direction: column;
-  padding: 0 1.5rem; }
+  flex-direction: column; }
 
 .huc-layout-basic-page > * {
   width: 100%;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding-left: 1rem; }
 
 @media (min-width: 500px) {
   .huc-layout-basic-page > * {
@@ -420,7 +427,7 @@ nav ul ul {
     -ms-grid-columns: auto 33% calc(66% - 8em) auto 4em 4em;
     -ms-grid-rows: 30vh auto auto auto;
     display: grid;
-    grid-template-columns: auto minmax(150px, 300px) minmax(450px, 700px) auto 4em 4em;
+    grid-template-columns: auto minmax(150px, 400px) minmax(450px, 600px) auto 4em 4em;
     grid-template-rows: 30vh auto auto auto; }
   .huc-layout-basic-page > * {
     width: 100%;
@@ -430,7 +437,8 @@ nav ul ul {
   -ms-grid-column: 2;
   -ms-grid-row: 1;
   grid-column: 2;
-  grid-row: 1/1; }
+  grid-row: 1/1;
+  background-color: #fff; }
 
 .navigation-top {
   -ms-grid-column: 3;
@@ -445,12 +453,15 @@ nav ul ul {
   grid-row: 2/2; }
 
 .content-main {
-  padding-right: 1.5em;
+  padding-right: 1em;
   -ms-grid-column: 3;
   -ms-grid-row: 2;
   grid-column: 3;
-  grid-row: 2/2;
-  padding-bottom: 3rem; }
+  grid-row: 2/2; }
+
+@media (min-width: 800px) {
+  .content-main {
+    padding-bottom: 3rem; } }
 
 .content-cards {
   -ms-grid-column: 2;
@@ -460,17 +471,19 @@ nav ul ul {
   grid-row: 3; }
 
 .cards-bg {
-  -ms-grid-column: 1;
-  -ms-grid-row: 3;
-  -ms-grid-column-span: 7;
-  grid-column: 1/7;
-  grid-row: 3; }
+  display: none; }
 
-.bar-gr {
-  background-color: #aae40a; }
-
-.bar-br {
-  background-color: #4a4227; }
+@media (min-width: 800px) {
+  .cards-bg {
+    display: flex;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    -ms-grid-column-span: 7;
+    grid-column: 1/7;
+    grid-row: 3;
+    transform: rotate(1deg);
+    z-index: -1;
+    margin: 0 -100px; } }
 
 @media (min-width: 500px) {
   .bar-gr {
@@ -487,18 +500,64 @@ nav ul ul {
     bottom: 0;
     color: #fff; } }
 
-.branding-logo img {
-  width: 100px;
-  height: auto; }
+.white-left {
+  display: none; }
 
-.huc-logo {
+.gradient-bg {
+  width: 100vw;
+  height: 66vw;
+  z-index: -1;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  justify-content: flex-end; }
 
-.huc-logo img {
-  width: 50px;
-  height: auto; }
+.animation-grid {
+  width: 100%;
+  height: 100%; }
+
+#getW {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  grid-column: 3/6;
+  grid-row: 1; }
+
+@media (min-width: 500px) {
+  .animation-home {
+    width: calc(100vw - 4em);
+    height: calc(66vw - 4em);
+    z-index: -1; } }
+
+@media (min-width: 800px) {
+  .white-left {
+    display: flex; }
+  .content-home {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    grid-column: 2;
+    grid-row: 2/2;
+    background-color: #fff;
+    padding-right: 1.5em; }
+  .gradient-bg {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 4em;
+    z-index: -1; }
+  .white-left {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    grid-column: 1;
+    grid-row: 1/10;
+    background-color: #fff; } }
+
+.branding-logo img {
+  width: 75px;
+  height: auto;
+  margin-top: 2em; }
+
+@media (min-width: 800px) {
+  .branding-logo img {
+    width: 100px;
+    margin-top: 0em; } }
 
 .hamburger {
   display: block; }
@@ -743,8 +802,14 @@ nav a {
 .dot-grid-bg {
   background-color: rgba(40, 16, 190, 0.22); }
 
-.content-cards {
-  padding: 3rem 0; }
+@media (min-width: 800px) {
+  .content-cards {
+    padding: 3rem 0; } }
+
+.institute-logo {
+  width: 50px;
+  height: auto;
+  margin-top: .5rem; }
 
 .gridDot {
   fill: rgba(0, 0, 0, 0.1);

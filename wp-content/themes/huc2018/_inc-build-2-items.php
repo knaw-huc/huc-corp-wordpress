@@ -4,18 +4,25 @@
 // card snippit
 $templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePostSnip);
 
+if ($postType == 'page') {
+  $order = 'menu_order';
+}else {
+  $order = 'ID';
+}
+
 //loop vars
 $args = array(
   'post_type' => $postType,
   'posts_per_page' => $postAmount,
   'paged' => $paged,
-  'orderby' => 'ID',
+  'orderby' => $order,
   'post_parent' => $postParent, //12404 //186
   'order' => $loopOrder,
   'category_name' => $loopTag,
   's' => $searchWord,
   );
 
+//print_r ($args);
 
 //paging init
 wp_reset_query();

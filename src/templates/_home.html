@@ -1,0 +1,46 @@
+{{> html-head}}
+<div class="huc-basic-layout homepage">
+  <div class="huc-basic-col1">
+
+    <div class="huc-home-content-inner">
+
+      <div class="huc-home-item huc-home-item-first">
+        {{> page-logo-hamburger}}
+
+
+        <div class="huc-bar-gradient">
+          <div class="huc-top-navigation huc-page-head">
+            {{> page-top-nav}}
+          </div>
+        <div class="huc-bar-gradient-grid" id="huc-grid"></div>
+        </div>
+
+
+        <div class="huc-home-hero-text">
+          {{-page-content-}}
+        </div>
+
+        <div class="huc-home-tags">
+          {{-site-categories-}}
+        </div>
+
+      </div>
+       {{-items-homepage-}}
+    </div>
+
+  </div>
+  <div class="huc-basic-col2">
+
+  </div>
+</div>
+
+<div class="huc-bar-page huc-bar-home">
+  {{> page-huc-bar-brown}}
+</div>
+{{> page-navigation-hamburger}}
+
+
+
+
+<script src="js/huc-grid.js" charset="utf-8"></script>
+{{> html-footer}}

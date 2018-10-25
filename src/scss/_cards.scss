@@ -7,11 +7,12 @@
 
 .card {
   background-color: $colorGreyLight;
-  padding: 1em;
+  padding: 1rem;
   width: 100%;
   margin: 0 0 #{$basicPadding} 0em;
   display: flex;
   flex-direction: column;
+  border-radius: $radius;
 
 }
 
@@ -19,6 +20,7 @@
   .card-grid, .card-grid-inline {
     flex-direction: row;
   }
+
 
   .card-grid .card {
     width: calc(33% - #{($basicPadding * 2)/3});
@@ -38,4 +40,11 @@
     width: calc(50% - #{($basicPadding * 1)/2});
     margin: 0 0 #{$basicPadding} 0;
   }
+}
+
+.card-color {
+  padding: 3em 1.5em 1.5em;
+  background-image: -moz-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
+  background-image: -webkit-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
+  background-image: -ms-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
 }
