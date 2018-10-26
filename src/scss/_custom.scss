@@ -433,3 +433,16 @@ nav a {
   height: auto;
   margin-top: .5rem;
 }
+
+.avatar {
+  width: 100%;
+  display: flex;
+
+}
+
+.avatar img{
+  border-radius: 50%;
+  height: 100px;
+  width: auto;
+  margin: -2em 0 1em 0;
+}

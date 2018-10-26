@@ -5,6 +5,11 @@ include('_inc-navigation-sub.php');
 include('_inc-site-categories.php');
 
 
+if ($postType == 'staff') {
+  $postTitle = $postStaffName;
+}
+
+
 
 //relative path
 $relPath = str_replace('https://','//', get_bloginfo('template_directory'));
@@ -28,6 +33,7 @@ $template = str_replace("{{page-author}}",$postAuthor, $template);
 $template = str_replace("{{page-link}}",$postLink, $template);
 $template = str_replace("{{page-excerpt}}",$postExcerpt, $template);
 $template = str_replace("{{page-hero-content}}",$postHero, $template);
+$template = str_replace("{{page-feat-image}}",$postFeatImage, $template);
 
 //custom fields
 $template = str_replace("{{page-meta-keywords}}",$postCustomMetaKeywords, $template);

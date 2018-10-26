@@ -35,7 +35,7 @@ function displayConnection($type) {
       $templateConnectionBuild = str_replace("{{item-date}}", get_the_date(), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-link}}", get_permalink( $post->ID ), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-id}}",get_the_ID(), $templateConnectionBuild);
-      $templateConnectionBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'medium'), $templateConnectionBuild);
+      $templateConnectionBuild = str_replace("{{item-thumb}}",get_the_post_thumbnail($page->ID, 'thumbnail'), $templateConnectionBuild);
 
       $templateConnectionBuild = str_replace("{{item-staff-name}}",get_post_meta( get_the_ID(), 'wpcf-staff-name', true ), $templateConnectionBuild);
       $templateConnectionBuild = str_replace("{{item-function}}",get_post_meta( get_the_ID(), 'wpcf-function', true ), $templateConnectionBuild);

@@ -18,6 +18,9 @@ $template = str_replace('{{items-homepage}}', $allHomeItems, $template);
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);
 
+$template = str_replace('{{items-updates}}', $allUpdatesItems, $template);
+$template = str_replace('{{items-updates-results}}', $allUpdatesItemsTotal_results.' results', $template);
+
 // Connections
 $template = str_replace('{{connect-publications-staff}}', displayConnection('publications-staff'), $template);
 $template = str_replace('{{connect-publications-project}}', displayConnection('publications-projects'), $template);
@@ -40,6 +43,9 @@ if ($allResearchPages != "") {
 if ($allNewsItems != "") {
   $template = str_replace('{{cards}}', $allNewsItems, $template);
 }
+if ($simpleList != "") {
+  $template = str_replace('{{cards}}', $simpleList, $template);
+}
 
-$allPostItems
+
 ?>

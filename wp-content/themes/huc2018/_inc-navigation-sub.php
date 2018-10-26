@@ -10,5 +10,8 @@ $walkerMenu = wp_nav_menu( array(
   'container_class' => false
 ) );
 
+//$walkerMenu = str_replace('/">', '/?pp=33&pn=142">', $walkerMenu);
+//$walkerMenu = '<a href="#">< </a><br>'.$walkerMenu;
 $walkerMenu = '<ul>'.$walkerMenu.'</ul>';
+
 ?>
