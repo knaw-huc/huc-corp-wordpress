@@ -427,7 +427,7 @@ nav ul ul {
     -ms-grid-columns: auto 33% calc(66% - 8em) auto 4em 4em;
     -ms-grid-rows: 30vh auto auto auto auto;
     display: grid;
-    grid-template-columns: auto minmax(150px, 400px) minmax(450px, 600px) auto 4em 4em;
+    grid-template-columns: auto minmax(150px, 400px) minmax(550px, 600px) auto 4em 4em;
     grid-template-rows: 30vh auto auto auto auto; }
   .huc-layout-basic-page > * {
     width: 100%;
