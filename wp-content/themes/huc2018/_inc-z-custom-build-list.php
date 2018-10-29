@@ -18,7 +18,7 @@ $template = str_replace('{{items-homepage}}', $allHomeItems, $template);
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);
 
-$template = str_replace('{{items-updates}}', $allUpdatesItems, $template);
+$template = str_replace('{{items-updates}}', '<h2>Updates</h2><div class=" updateItems">'.$allUpdatesItems.'</div>', $template);
 $template = str_replace('{{items-updates-results}}', $allUpdatesItemsTotal_results.' results', $template);
 
 // Connections
