@@ -21,11 +21,11 @@
   .huc-layout-basic-page {
     display: -ms-grid;
     -ms-grid-columns: auto 33% calc(66% - #{$barWidthDouble}) auto #{$barWidth} #{$barWidth};
-    -ms-grid-rows:  30vh auto auto auto;
+    -ms-grid-rows:  30vh auto auto auto auto;
 
     display: grid;
     grid-template-columns:  auto minmax(150px, 400px) minmax(450px, 600px) auto  #{$barWidth} #{$barWidth};
-    grid-template-rows:  30vh auto auto auto;
+    grid-template-rows:  30vh auto auto auto auto;
   }
 
   .huc-layout-basic-page >*{
@@ -129,6 +129,29 @@
 }
 
 
+.footer-bg {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
 
+  grid-column: 1/5;
+  grid-row: 5/6;
+  background-color: #eeeeee;
+
+  margin-top: 5em;
+}
+
+.footer {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+
+  grid-column: 2/4;
+  grid-row: 5/6;
+  padding: 2em;
+  margin-top: 5em;
+}
 
 ////////

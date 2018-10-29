@@ -5,18 +5,21 @@ function gridItemPos(idName, itemId, x, y, scale) {
   document.getElementById(idName+itemId).style.transform = 'translate('+x+'px,'+y+'px) scale('+scale+','+scale+')';
 }
 
+
+// get coords and get position
 function coordinateItems(idName) {
-
-
   for(var i = 0; i < coors.length; i++){
-    var x= coors[i][0];
-    var y= coors[i][1];
+    var x= (coors[i][0] / 3);
+    var y= (coors[i][1] / 3);
 
     if(itemsPosition == 'absolute') {
       //asuming the image is 100x100
 
-      x = x-(300/2);
-      y = y-(300/2);
+      var width1prc = divWidth / 135;
+      var height1prc = divHeight /135;
+
+      x = (x-(100/2))*width1prc;
+      y = (y-(100/2))*height1prc;
     }
 
     gridItemPos(idName, i, x, y, 1);
@@ -30,21 +33,7 @@ function shapeTween(number) {
   randomCoors('near', 0);
   coordinateItems('gridDot');
 }
-  // var seti = setTimeout(function() {
-  //   randomCoors('near', 0);
-  //   coordinateItems('gridDot');
-  // },3000);
 
-
-  //setTimeout(coordinateItems, 3000, 'gridDot', 0);
-  // coors = coorsArr[number];
-  // randomCoors('near', 0);
-  // coordinateItems('gridDot',0);
-
-
-// setInterval(shapeTween, 4000, 1);
-// setInterval(shapeTween, 8000, 2);
-// setInterval(shapeTween, 16000, 0);
 
 function animation() {
   setTimeout(shapeTween, 4000, 1);
@@ -56,12 +45,19 @@ function animation() {
   setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We collect data'; },12000);
 }
 
+
+
+
 function loopAnimation() {
   setInterval(animation, 16000);
 }
 
 animation();
 loopAnimation();
+
+
+
+
 
 function shuffleArray(a) {
     var j, x, i;
