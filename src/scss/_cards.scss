@@ -19,6 +19,7 @@
 @media (min-width: 800px) {
   .card-grid, .card-grid-inline {
     flex-direction: row;
+    justify-content: flex-end;
   }
 
 

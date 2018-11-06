@@ -1,6 +1,6 @@
 var divName = 'grid';
 var coorsBackup = [];
-var radius = '1.5';
+var radius = '3';
 var perRingAmountArray = [];
 
 

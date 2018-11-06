@@ -18,8 +18,14 @@ $template = str_replace('{{items-homepage}}', $allHomeItems, $template);
 $template = str_replace('{{items-staff}}', $allStaffItems, $template);
 $template = str_replace('{{items-staff-results}}', $allStaffItemsTotal_results.' results', $template);
 
-$template = str_replace('{{items-updates}}', '<h2>Updates</h2><div class=" updateItems">'.$allUpdatesItems.'</div>', $template);
-$template = str_replace('{{items-updates-results}}', $allUpdatesItemsTotal_results.' results', $template);
+
+if ($allUpdatesItems != '') {
+  $template = str_replace('{{items-updates}}', '<h2>Updates</h2><div class=" updateItems">'.$allUpdatesItems.'</div>', $template);
+  $template = str_replace('{{items-updates-results}}', $allUpdatesItemsTotal_results.' results', $template);
+} else {
+  $template = str_replace('{{items-updates}}', '', $template);
+}
+
 
 // Connections
 $template = str_replace('{{connect-publications-staff}}', displayConnection('publications-staff'), $template);

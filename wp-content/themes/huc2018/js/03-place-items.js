@@ -30,26 +30,29 @@ coordinateItems('gridDot');
 
 function shapeTween(number) {
   coors = shuffleArray(coorsArr[number]);
+  //coors = coorsArr[number];
   randomCoors('near', 0);
   coordinateItems('gridDot');
 }
 
 
 function animation() {
-  setTimeout(shapeTween, 4000, 1);
-  setTimeout(shapeTween, 8000, 2);
-  setTimeout(shapeTween, 12000, 0);
+  setTimeout(shapeTween, 8000, 0);
+  setTimeout(shapeTween, 16000, 3);
+  setTimeout(shapeTween, 24000, 1);
+  setTimeout(shapeTween, 32000, 3);
+  setTimeout(shapeTween, 40000, 2);
 
-  setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We build infra'; },4000);
-  setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We combine the data'; },8000);
-  setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We collect data'; },12000);
+  //setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We build infra'; },8000);
+  //setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We combine the data'; },16000);
+  //setTimeout(function() { document.getElementById('txt-content').innerHTML = 'We collect data'; },24000);
 }
 
 
 
 
 function loopAnimation() {
-  setInterval(animation, 16000);
+  setInterval(animation, 48000);
 }
 
 animation();

@@ -12,6 +12,9 @@ if (have_posts()) : while (have_posts()) : the_post();
   $postStaffName = get_post_meta( get_the_ID(), 'wpcf-staff-name', true );
   $postProductName = get_post_meta( get_the_ID(), 'wpcf-tool-name', true );
 
+  if($postType == 'page') {
+    $postFeatImage = '';
+  }
 
   include('_inc-z-custom-build-custom-fields.php');
   //include('_inc-txt-github.php');
