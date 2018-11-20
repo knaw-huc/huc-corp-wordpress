@@ -7,5 +7,6 @@
   $postCustomMetaPhone = get_post_meta( get_the_ID(), 'wpcf-phone', true );
   $postCustomMetaTwitter = get_post_meta( get_the_ID(), 'wpcf-twitter', true );
   $postCustomMetaDepartment = get_post_meta( get_the_ID(), 'wpcf-department', true );
+  $postCustomMetaInstitute = get_post_meta( get_the_ID(), 'wpcf-institute', true );
 
 ?>

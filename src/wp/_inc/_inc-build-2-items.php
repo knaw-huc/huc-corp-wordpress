@@ -51,6 +51,7 @@ if ( have_posts() ) :
     $templatePostsBuild = str_replace("{{item-function}}",get_post_meta( get_the_ID(), 'wpcf-function', true ), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-phone}}",get_post_meta( get_the_ID(), 'wpcf-phone', true ), $templatePostsBuild);
     $templatePostsBuild = str_replace("{{item-email}}",get_post_meta( get_the_ID(), 'wpcf-email', true ), $templatePostsBuild);
+    $templatePostsBuild = str_replace("{{institute}}",get_post_meta( get_the_ID(), 'wpcf-institute', true ), $templatePostsBuild);
     $$varName = $$varName.$templatePostsBuild;
   endwhile;
 

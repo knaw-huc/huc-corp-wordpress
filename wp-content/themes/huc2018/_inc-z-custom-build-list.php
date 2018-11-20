@@ -52,6 +52,8 @@ if ($allNewsItems != "") {
 if ($simpleList != "") {
   $template = str_replace('{{cards}}', $simpleList, $template);
 }
-
+if ($allUpdatesItems != "") {
+  $template = str_replace('{{cards}}', $allUpdatesItems, $template);
+}
 
 ?>
