@@ -57,7 +57,7 @@ $template = str_replace('href="css/','href="'.$relPath.'/css/', $template);
 $template = str_replace('src="js/','src="'.$relPath.'/js/', $template);
 $template = str_replace('src="images/','src="'.$relPath.'/images/', $template);
 $template = str_replace('href="images/','href="'.$relPath.'/images/', $template);
-$template = str_replace('https://huc.jauco.nl/','https://huc.knaw.nl/', $template);
+$template = str_replace('http://hucc.jauco.nl/','http://hug.knaw.nl/', $template);
 
 echo $template;
 ?>
