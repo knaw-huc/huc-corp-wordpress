@@ -9,10 +9,11 @@ function displayConnection($type) {
     'sortable' => 'any',
   ) );
 
+  $localPath = realpath(dirname(__FILE__));
   if (strpos($type, 'staff') !== false) {
-    $templateConnection =  file_get_contents(get_bloginfo('template_directory').'/item-person.html');
+    $templateConnection =  file_get_contents($localPath.'/item-person.html');
   }else {
-    $templateConnection =  file_get_contents(get_bloginfo('template_directory').'/item-card.html');
+    $templateConnection =  file_get_contents($localPath.'/item-card.html');
   }
 
 

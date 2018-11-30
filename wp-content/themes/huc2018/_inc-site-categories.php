@@ -2,7 +2,8 @@
 $categories = get_categories(); //wp_get_post_categories
 
 $templateTag = 'element-tag.html';
-$tagFormat =  file_get_contents(get_bloginfo('template_directory').'/'.$templateTag);
+$localPath = realpath(dirname(__FILE__));
+$tagFormat =  file_get_contents($localPath.'/'.$templateTag);
 
 foreach ($categories as $categorie ) {
   if ($categorie->name != 'Uncategorized') {

@@ -10,13 +10,13 @@ if ($postType == 'staff') {
 }
 
 
-
 //relative path
 $relPath = str_replace('https://','//', get_bloginfo('template_directory'));
 $relPath = str_replace('http://','//', $relPath);
 
 //Build page
-$template =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePage);
+$localPath = realpath(dirname(__FILE__));
+$template =  file_get_contents($localPath.'/'.$templatePage);
 
 //general
 $template = str_replace('{{nav}}',$headerMenu, $template);
@@ -52,7 +52,7 @@ include('_inc-z-custom-build-list.php');
 
 $template = str_replace('@@wpPaging',$paging, $template);
 
-// final chnages
+// final changes
 $template = str_replace('href="css/','href="'.$relPath.'/css/', $template);
 $template = str_replace('src="js/','src="'.$relPath.'/js/', $template);
 $template = str_replace('src="images/','src="'.$relPath.'/images/', $template);

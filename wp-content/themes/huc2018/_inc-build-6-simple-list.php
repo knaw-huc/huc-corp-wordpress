@@ -4,7 +4,8 @@ include('_inc-page-categories.php');    //  get page catergories
 //include('_inc-connections.php');        //  get connections from other custom post types
 include('_inc-func.php');
 // card snippit
-$templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePostSnip);
+$localPath = realpath(dirname(__FILE__));
+$templatePosts =  file_get_contents($localPath.'/'.$templatePostSnip);
 
 //the loop
 if ( have_posts() ) : while ( have_posts() ) : the_post();

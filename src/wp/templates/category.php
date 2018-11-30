@@ -2,7 +2,8 @@
 
 $templatePage = 'page.html';
 $templatePostSnip = 'item-card.html';
-$templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePostSnip);
+$localPath = realpath(dirname(__FILE__));
+$templatePosts =  file_get_contents($localPath.'/'.$templatePostSnip);
 
 if (have_posts()) : while (have_posts()) : the_post();
 

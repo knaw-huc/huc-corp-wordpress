@@ -2,7 +2,8 @@
 
 
 // card snippit
-$templatePosts =  file_get_contents(get_bloginfo('template_directory').'/'.$templatePostSnip);
+$localPath = realpath(dirname(__FILE__));
+$templatePosts =  file_get_contents($localPath.'/'.$templatePostSnip);
 
 
 
