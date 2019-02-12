@@ -16,6 +16,9 @@ if ($postType == 'page') {
 }else {
   $order = 'ID';
 }
+if ($isBlogAuthor) {
+  $authorName = get_post_meta( get_the_ID(), 'wpcf-blogs-by-author', true );;
+}
 
 //loop vars
 $args = array(
@@ -26,6 +29,7 @@ $args = array(
   'post_parent'     => $postParent, //12404 //186
   'order'           => $loopOrder,
   'category_name'   => $loopTag,
+  'author_name'     => $authorName,
   's'               => $searchWord,
   );
 
