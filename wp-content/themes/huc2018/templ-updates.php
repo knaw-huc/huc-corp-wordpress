@@ -8,9 +8,9 @@ include('_inc-build-1-single-page.php');
 // Handle items  item file | post type | number of items | variable name | parent id 12404 //186
 $lists = array
   (
-    array('item-update.html','update','12','DESC', 'allUpdatesItems')
+    array('item-update.html','update','12','DESC', 'allUpdates')
   );
-$loopTag = 'news';
+
 include('_inc-build-3-template-array.php');
 
 // Build the page

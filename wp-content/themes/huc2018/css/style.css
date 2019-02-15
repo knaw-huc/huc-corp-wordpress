@@ -721,7 +721,10 @@ nav a {
 
 .update-item {
   width: calc(33% - 1em);
-  margin-right: 1em; }
+  margin-right: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  padding: 1rem .5rem; }
 
 .connectPartners {
   flex-direction: row;
