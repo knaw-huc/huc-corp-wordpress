@@ -19,7 +19,7 @@
 @media (min-width: 800px) {
   .card-grid, .card-grid-inline {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
 
@@ -54,4 +54,9 @@
   width: auto;
   height: 40px;
   margin: .5rem 0 0 0;
+}
+.card-simple-news {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }

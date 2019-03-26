@@ -19,31 +19,43 @@
 <div class="huc-layout-basic-page">
 
   <div class="branding-logo vertical-mid"><a href="/"><img src="images/logo-knaw-humanities-cluster.png" alt="logo knaw humanities cluster"></a></div>
-    <div class="white-left">&nbsp;</div>
+
     <div class="navigation-top vertical-mid"><nav class="top-navigation">
   {{nav}}
 </nav>
 </div>
-    <div class="gradient-bg huc-bar-gradient">
-      <div class="animation-grid" id="grid">.</div>
+
+    <div class="navigation-sub huc-subnav">
+      {{page-feat-image}}<br>
+      {{walker}}
+
     </div>
 
-    <div class="content-home">
-      <div class="huc-home-hero-text">
-        <div class="huc-home-txt">
-          {{page-content}}
-        </div>
+    <div class="content-main">
+      <h1>{{page-title}}</h1>
+      {{page-content}}<br>
+      {{cards}}
 
+
+    </div>
+
+
+
+    <div class="footer-bg">&nbsp;</div>
+    
+    <footer class="footer">
+      <div class="content-cards card-grid">
+        <div class="col"><strong>KNAW <br>Humanities Cluster (HuC) </strong><br>
+          Oudezijds Achterburgwal 185<br>
+          1012 DK Amsterdam<br>
+          +31 20 224 68 00<br>
+          <a href="mailto:info@huc.knaw.nl">info@huc.knaw.nl</a></div>
+        <div class="col"><a href="https://twitter.com/knawhuc" target="_blank">Follow us on Twitter</a></div>
+        <div class="col"><a href="/mailinglist">Mailinglist</a></div>
       </div>
-     <h2>Updates</h2>
-     {{items-homepage}}
-    </div>
-
-
-
-  <div id="getW">&nbsp;</div>
+    </footer>
   </div>
-
+  <div class="bar-gr huc-bar-gradient"></div>
   <div class="bar-br huc-bar-brown">
     <div class="huc-bar-language"><a href="">nl</a> <a href="">eng</a></div>
     <div class="huc-bar-partners">
@@ -59,6 +71,3 @@
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-90872465-1', 'auto'); ga('send', 'pageview');</script>
   </body>
 </html>
-
-
-<script src="js/js-home.js"></script>
