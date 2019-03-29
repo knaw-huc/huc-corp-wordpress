@@ -1,6 +1,7 @@
 <?php
 
 if (have_posts()) : while (have_posts()) : the_post();
+  $theId = get_the_ID();
   $postTitle = get_the_title();
   $postContent = apply_filters( 'the_content', get_the_content() );
   $postDate = get_the_date();
