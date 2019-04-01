@@ -646,6 +646,8 @@ nav ul ul {
   .huc-logo img {
     width: 100px;
     height: auto; }
+  .top-navigation {
+    z-index: 1000; }
   .top-navigation li {
     display: inline-block;
     list-style: none;

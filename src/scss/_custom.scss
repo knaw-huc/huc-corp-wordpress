@@ -95,6 +95,10 @@
     height: auto;
   }
 
+  .top-navigation {
+    z-index: 1000;
+
+  }
 
   .top-navigation li{
     display: inline-block;
