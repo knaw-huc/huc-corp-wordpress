@@ -15,6 +15,7 @@ $lists = array
 
 
   );
+  $loopTag = 'news';
 include('_inc-build-3-template-array.php');
 
 
