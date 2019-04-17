@@ -881,6 +881,9 @@ nav a {
   height: 50px;
   margin-bottom: 1em; }
 
+.home-nav {
+  margin-left: 3rem; }
+
 .gridDot {
   fill: #fff;
   transition: all 2s ease;
