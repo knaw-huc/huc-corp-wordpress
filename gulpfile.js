@@ -243,7 +243,7 @@ gulp.task('build', ['distAssets']);
 gulp.task('wp', ['distAssets'], function() {
   setTimeout(function(){
     return gulp.src([dst+'/**/*'])
-    .pipe(gulp.dest('/Users/basdoppen/Webserver/wp-huc/wp-content/themes/'+themeName))
+    .pipe(gulp.dest('/Users/basdoppen/Dropbox/MAMP/httpdocs/wp-03/wp-content/themes/'+themeName))
   }, 1000);
 
 })
