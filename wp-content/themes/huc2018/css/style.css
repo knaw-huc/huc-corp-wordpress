@@ -533,6 +533,10 @@ nav ul ul {
   padding: 2em;
   margin-top: 5em; }
 
+.underLogo {
+  color: #2b2b2b;
+  font-size: .9rem; }
+
 .white-left {
   display: none; }
 
