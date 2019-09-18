@@ -11,7 +11,7 @@ $lists = array
   (
 
     //array('item-homepage.html','homepage-items','10','ASC', 'allHomeItems')
-    array('item-news-blog-home.html','post','4','DESC', 'allHomeItems', '')//4
+    array('item-news-blog-home.html','post','0','DESC', 'allHomeItems', '')//4
 
 
   );
