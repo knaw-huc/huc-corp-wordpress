@@ -568,7 +568,8 @@ nav ul ul {
     grid-column: 2;
     grid-row: 2/2;
     background-color: #fff;
-    padding-right: 1.5em; }
+    padding-right: 1.5em;
+    min-height: 70vh; }
   .gradient-bg {
     position: fixed;
     top: 0px;
