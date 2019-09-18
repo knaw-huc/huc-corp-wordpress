@@ -423,7 +423,7 @@ nav ul ul {
 .huc-layout-basic-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 110vh; }
 
 .huc-layout-basic-page > * {
   width: 100%;
@@ -562,6 +562,10 @@ nav ul ul {
 @media (min-width: 800px) {
   .white-left {
     display: flex; }
+  .huc-home-hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
   .content-home {
     -ms-grid-column: 2;
     -ms-grid-row: 2;
@@ -570,6 +574,13 @@ nav ul ul {
     background-color: #fff;
     padding-right: 1.5em;
     min-height: 70vh; }
+  .homelogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .homelogo img {
+    height: 60px;
+    width: auto; }
   .gradient-bg {
     position: fixed;
     top: 0px;
