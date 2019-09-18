@@ -1,6 +1,7 @@
 .huc-layout-basic-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .huc-layout-basic-page >*{
