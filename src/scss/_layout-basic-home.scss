@@ -27,6 +27,19 @@
 }
 
 
+.homelogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.homelogo img{
+  height: 60px;
+  width: auto;
+}
+
+
+
+
 @media (min-width: 500px) {
   .gradient-bg {
     width: calc(100vw - #{$barWidth});

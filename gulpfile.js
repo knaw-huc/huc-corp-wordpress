@@ -51,7 +51,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('bsProx', function() {
     browserSync.init({
-        proxy: "http://localhost:8888/wp-huc"
+        proxy: "http://localhost:8888/wp-03"
     });
 });
 
